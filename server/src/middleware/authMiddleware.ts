@@ -38,3 +38,14 @@ export const authenticate = async (
     return res.status(401).json({ message: "Not authorized, no token" });
   }
 };
+
+export const authorize = (roles: string[]) => {
+  return (req: AuthRequest, res: Response, next: NextFunction) => {
+    if (!req.user || !roles.includes(req.user.role)) {
+      return res.status(403).json({
+        message: "Forbidden: You do not have the required permissions",
+      });
+    }
+    next();
+  };
+};

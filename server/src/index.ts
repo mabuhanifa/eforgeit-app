@@ -2,7 +2,10 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express, { Application, Request, Response } from "express";
 import { connectDB } from "./config/db";
+import adminRoutes from "./routes/adminRoutes";
+import assessmentRoutes from "./routes/assessmentRoutes";
 import authRoutes from "./routes/authRoutes";
+import certificationRoutes from "./routes/certificationRoutes";
 
 dotenv.config();
 
@@ -15,6 +18,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/assessments", assessmentRoutes);
+app.use("/api/certifications", certificationRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("API is running...");
