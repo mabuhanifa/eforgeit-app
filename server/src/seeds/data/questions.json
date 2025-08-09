@@ -1,0 +1,45 @@
+[
+  {
+    "competency": "Problem Solving",
+    "level": "A1",
+    "questionText": "What is the first step in solving a problem?",
+    "options": [
+      "Implement a solution",
+      "Identify the problem",
+      "Test the solution",
+      "Ask for help"
+    ],
+    "correctAnswer": "Identify the problem"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A2",
+    "questionText": "Which of these is a good strategy for breaking down a complex problem?",
+    "options": ["Guessing", "Ignoring it", "Decomposition", "Procrastination"],
+    "correctAnswer": "Decomposition"
+  },
+  {
+    "competency": "Communication",
+    "level": "B1",
+    "questionText": "What is 'active listening'?",
+    "options": [
+      "Hearing words",
+      "Waiting for your turn to speak",
+      "Fully concentrating on what is being said",
+      "Interrupting to ask questions"
+    ],
+    "correctAnswer": "Fully concentrating on what is being said"
+  },
+  {
+    "competency": "Communication",
+    "level": "B2",
+    "questionText": "When giving constructive feedback, it is best to focus on:",
+    "options": [
+      "The person's personality",
+      "The specific behavior or action",
+      "Your own feelings",
+      "General assumptions"
+    ],
+    "correctAnswer": "The specific behavior or action"
+  }
+]

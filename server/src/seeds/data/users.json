@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "password": "password123",
+    "role": "Admin",
+    "isVerified": true
+  },
+  {
+    "name": "Supervisor User",
+    "email": "supervisor@example.com",
+    "password": "password123",
+    "role": "Supervisor",
+    "isVerified": true
+  },
+  {
+    "name": "Student User",
+    "email": "student@example.com",
+    "password": "password123",
+    "role": "Student",
+    "isVerified": true
+  },
+  {
+    "name": "Another Student",
+    "email": "student2@example.com",
+    "password": "password123",
+    "role": "Student",
+    "isVerified": false
+  }
+]

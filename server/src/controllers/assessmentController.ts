@@ -26,11 +26,12 @@ export const startAssessment = async (req: AuthRequest, res: Response) => {
 
     let currentStep = 1;
     if (lastAssessment) {
-      if (
-        lastAssessment.score &&
-        lastAssessment.score >= 75 &&
-        lastAssessment.currentStep < 3
-      ) {
+      const lastResult = calculateScoreAndLevel(
+        lastAssessment.currentStep,
+        lastAssessment.score || 0
+      );
+
+      if (lastResult.unlocksNextStep && lastAssessment.currentStep < 3) {
         currentStep = lastAssessment.currentStep + 1;
       } else {
         return res
@@ -64,7 +65,7 @@ export const startAssessment = async (req: AuthRequest, res: Response) => {
       user: user._id,
       currentStep,
       startTime,
-      endTime, // Set the end time
+      endTime,
       status: "InProgress",
     });
 
@@ -97,9 +98,7 @@ export const submitAssessment = async (req: AuthRequest, res: Response) => {
         .json({ message: "This assessment has already been completed." });
     }
 
-    // Timer System: Check if the submission is within the time limit
     if (assessment.endTime && new Date() > assessment.endTime) {
-      // Mark assessment as completed and failed due to time out
       assessment.status = "Completed";
       assessment.score = 0;
       await assessment.save();
@@ -141,7 +140,6 @@ export const submitAssessment = async (req: AuthRequest, res: Response) => {
       await user.save();
     }
 
-    // Send email notification
     await sendEmail({
       to: user.email,
       subject: "Your Assessment Results",

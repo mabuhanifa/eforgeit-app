@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "seed:import": "ts-node src/seeds/seeder.ts --import",
+    "seed:destroy": "ts-node src/seeds/seeder.ts --destroy"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
