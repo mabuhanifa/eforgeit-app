@@ -1,4 +1,4 @@
-import { LogOut } from "lucide-react";
+import { LogOut, Shield } from "lucide-react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../api/authApiSlice";
@@ -23,13 +23,22 @@ const Header = () => {
         <div>
           {accessToken ? (
             <div className="flex items-center gap-4">
-              <span>Welcome, {user?.name}</span>
+              <span className="hidden sm:inline">Welcome, {user?.name}</span>
+              {user?.role === "Admin" && (
+                <Link
+                  to="/admin"
+                  className="flex items-center gap-2 rounded bg-yellow-500 px-3 py-2 text-sm font-semibold text-black transition-colors hover:bg-yellow-600"
+                >
+                  <Shield size={16} />
+                  <span className="hidden md:inline">Admin Panel</span>
+                </Link>
+              )}
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-2 rounded px-4 py-2 hover:bg-gray-700"
+                className="rounded p-2 hover:bg-gray-700"
+                title="Logout"
               >
-                <LogOut size={16} />
-                Logout
+                <LogOut size={18} />
               </button>
             </div>
           ) : (

@@ -7,7 +7,6 @@ import adminRoutes from "./routes/adminRoutes";
 import assessmentRoutes from "./routes/assessmentRoutes";
 import authRoutes from "./routes/authRoutes";
 import certificationRoutes from "./routes/certificationRoutes";
-import questionRoutes from "./routes/questionRoutes";
 
 dotenv.config();
 
@@ -16,14 +15,18 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
-app.use(cors());
+// Configure CORS to allow requests from your client
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Replace with your client's actual origin
+  })
+);
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/assessments", assessmentRoutes);
 app.use("/api/certifications", certificationRoutes);
-app.use("/api/questions", questionRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("API is running...");

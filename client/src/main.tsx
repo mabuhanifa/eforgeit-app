@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import App from "./App.tsx";
 import { persistor, store } from "./app/store";
+import ErrorBoundary from "./components/ErrorBoundary.tsx";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
@@ -13,8 +14,10 @@ createRoot(document.getElementById("root")!).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
-          <App />
-          <Toaster position="top-right" />
+          <ErrorBoundary>
+            <App />
+            <Toaster position="top-right" />
+          </ErrorBoundary>
         </BrowserRouter>
       </PersistGate>
     </Provider>

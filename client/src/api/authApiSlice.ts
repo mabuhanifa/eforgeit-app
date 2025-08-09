@@ -41,7 +41,7 @@ export const authApiSlice = baseApi.injectEndpoints({
       },
     }),
     getProfile: builder.query({
-      query: () => "/auth/profile",
+      query: () => ({ url: "/auth/profile", method: "GET" }),
     }),
     sendOtp: builder.mutation({
       query: (credentials) => ({

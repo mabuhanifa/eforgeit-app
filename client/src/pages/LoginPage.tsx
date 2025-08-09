@@ -24,7 +24,7 @@ const LoginPage = () => {
     try {
       await login(data).unwrap();
       toast.success("Logged in successfully!");
-      navigate("/"); // or to a dashboard
+      navigate("/");
     } catch (err: any) {
       toast.error(err.data?.message || "Failed to login");
     }

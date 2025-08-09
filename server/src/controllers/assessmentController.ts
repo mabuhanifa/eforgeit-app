@@ -65,11 +65,15 @@ export const startAssessment = async (req: AuthRequest, res: Response) => {
       user: user._id,
       currentStep,
       startTime,
-      endTime,
+      endTime, // Set the end time
       status: "InProgress",
     });
 
-    res.status(200).json({ assessmentId: assessment._id, questions });
+    res.status(200).json({
+      assessmentId: assessment._id,
+      questions,
+      endTime: assessment.endTime,
+    });
   } catch (error) {
     res
       .status(500)

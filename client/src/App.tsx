@@ -1,6 +1,11 @@
 import { Route, Routes } from "react-router-dom";
+import AdminLayout from "./components/admin/AdminLayout";
+import AdminProtectedRoute from "./components/admin/AdminProtectedRoute";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
+import QuestionManagementPage from "./pages/admin/QuestionManagementPage";
+import UserManagementPage from "./pages/admin/UserManagementPage";
 import AssessmentPage from "./pages/AssessmentPage";
 import AssessmentResultPage from "./pages/AssessmentResultPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
@@ -29,6 +34,14 @@ export default function App() {
           />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
+      </Route>
+
+      <Route element={<AdminProtectedRoute />}>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboardPage />} />
+          <Route path="users" element={<UserManagementPage />} />
+          <Route path="questions" element={<QuestionManagementPage />} />
+        </Route>
       </Route>
     </Routes>
   );
