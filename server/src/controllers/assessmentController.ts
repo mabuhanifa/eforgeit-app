@@ -2,6 +2,7 @@ import { Response } from "express";
 import { AuthRequest } from "../middleware/authMiddleware";
 import Assessment from "../models/Assessment";
 import Question from "../models/Question";
+import { sendEmail } from "../services/emailService";
 import { calculateScoreAndLevel } from "../services/scoringService";
 
 interface UserAnswer {
@@ -56,10 +57,14 @@ export const startAssessment = async (req: AuthRequest, res: Response) => {
       });
     }
 
+    const startTime = new Date();
+    const endTime = new Date(startTime.getTime() + 44 * 60 * 1000); // 44 minutes timer
+
     const assessment = await Assessment.create({
       user: user._id,
       currentStep,
-      startTime: new Date(),
+      startTime,
+      endTime, // Set the end time
       status: "InProgress",
     });
 
@@ -90,6 +95,17 @@ export const submitAssessment = async (req: AuthRequest, res: Response) => {
       return res
         .status(400)
         .json({ message: "This assessment has already been completed." });
+    }
+
+    // Timer System: Check if the submission is within the time limit
+    if (assessment.endTime && new Date() > assessment.endTime) {
+      // Mark assessment as completed and failed due to time out
+      assessment.status = "Completed";
+      assessment.score = 0;
+      await assessment.save();
+      return res
+        .status(400)
+        .json({ message: "Time has expired for this assessment." });
     }
 
     const questionIds = answers.map((a: UserAnswer) => a.questionId);
@@ -124,6 +140,17 @@ export const submitAssessment = async (req: AuthRequest, res: Response) => {
       user.failedStep1 = true;
       await user.save();
     }
+
+    // Send email notification
+    await sendEmail({
+      to: user.email,
+      subject: "Your Assessment Results",
+      text: `Hello ${
+        user.name
+      },\n\nYou have completed your assessment.\n\nScore: ${assessment.score.toFixed(
+        2
+      )}%\nLevel Achieved: ${assessment.levelAchieved}\n\nThank you.`,
+    });
 
     res.status(200).json({
       message: "Assessment submitted successfully.",

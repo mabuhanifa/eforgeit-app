@@ -1,9 +1,26 @@
 import { Router } from "express";
-import { getAdminDashboard } from "../controllers/adminController";
+import {
+  createUser,
+  deleteUser,
+  getAnalytics,
+  getAssessmentReports,
+  getUserById,
+  getUsers,
+  updateUser,
+} from "../controllers/adminController";
 import { authenticate, authorize } from "../middleware/authMiddleware";
 
 const router = Router();
 
-router.get("/dashboard", authenticate, authorize(["Admin"]), getAdminDashboard);
+// Protect all admin routes
+router.use(authenticate, authorize(["Admin"]));
+
+// User management routes
+router.route("/users").get(getUsers).post(createUser);
+router.route("/users/:id").get(getUserById).put(updateUser).delete(deleteUser);
+
+// Reporting routes
+router.get("/reports/assessments", getAssessmentReports);
+router.get("/reports/analytics", getAnalytics);
 
 export default router;
