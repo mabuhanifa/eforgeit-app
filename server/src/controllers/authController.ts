@@ -57,13 +57,25 @@ export const loginUser = async (req: Request, res: Response) => {
     const user = await User.findOne({ email });
     if (user && (await user.comparePassword(password))) {
       if (!user.isVerified) {
-        return res.status(403).json({
-          message: "Account not verified. Please check your email for an OTP.",
-        });
+        return res
+          .status(403)
+          .json({
+            message:
+              "Account not verified. Please check your email for an OTP.",
+          });
       }
       const accessToken = generateAccessToken(String(user._id));
       const refreshToken = generateRefreshToken(String(user._id));
-      res.json({ accessToken, refreshToken });
+      res.json({
+        user: {
+          _id: user._id,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+        },
+        accessToken,
+        refreshToken,
+      });
     } else {
       res.status(401).json({ message: "Invalid email or password" });
     }

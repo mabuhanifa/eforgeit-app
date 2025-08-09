@@ -1,6 +1,5 @@
-import { BaseQueryFn } from "@reduxjs/toolkit/query";
-import axios, { AxiosRequestConfig } from "axios";
-import { RootState } from "../app/store";
+import { type BaseQueryFn } from "@reduxjs/toolkit/query";
+import axios, { type AxiosRequestConfig } from "axios";
 
 export const axiosBaseQuery =
   (
@@ -17,7 +16,8 @@ export const axiosBaseQuery =
     unknown
   > =>
   async ({ url, method, data, params, headers }, { getState }) => {
-    const token = (getState() as RootState).auth.accessToken;
+    // Cast getState() to any to break circular dependency
+    const token = (getState() as any).auth.accessToken;
     if (token) {
       headers = {
         ...headers,

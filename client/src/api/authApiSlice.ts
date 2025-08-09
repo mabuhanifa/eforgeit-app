@@ -12,17 +12,7 @@ export const authApiSlice = baseApi.injectEndpoints({
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
           const { data } = await queryFulfilled;
-          const { accessToken, refreshToken } = data;
-          const profileResponse = await dispatch(
-            authApiSlice.endpoints.getProfile.initiate(undefined)
-          ).unwrap();
-          dispatch(
-            setCredentials({
-              user: profileResponse,
-              accessToken,
-              refreshToken,
-            })
-          );
+          dispatch(setCredentials(data));
         } catch (err) {
           console.error(err);
         }
@@ -53,6 +43,34 @@ export const authApiSlice = baseApi.injectEndpoints({
     getProfile: builder.query({
       query: () => "/auth/profile",
     }),
+    sendOtp: builder.mutation({
+      query: (credentials) => ({
+        url: "/auth/send-otp",
+        method: "POST",
+        data: credentials,
+      }),
+    }),
+    verifyOtp: builder.mutation({
+      query: (credentials) => ({
+        url: "/auth/verify-otp",
+        method: "POST",
+        data: credentials,
+      }),
+    }),
+    forgotPassword: builder.mutation({
+      query: (credentials) => ({
+        url: "/auth/forgot-password",
+        method: "POST",
+        data: credentials,
+      }),
+    }),
+    resetPassword: builder.mutation({
+      query: (credentials) => ({
+        url: "/auth/reset-password",
+        method: "POST",
+        data: credentials,
+      }),
+    }),
   }),
 });
 
@@ -61,4 +79,8 @@ export const {
   useRegisterMutation,
   useLogoutMutation,
   useGetProfileQuery,
+  useSendOtpMutation,
+  useVerifyOtpMutation,
+  useForgotPasswordMutation,
+  useResetPasswordMutation,
 } = authApiSlice;

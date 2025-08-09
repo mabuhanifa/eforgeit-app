@@ -12,6 +12,253 @@
     "correctAnswer": "Identify the problem"
   },
   {
+    "competency": "Digital Literacy",
+    "level": "A1",
+    "questionText": "Which of these is a web browser?",
+    "options": [
+      "Microsoft Word",
+      "Google Chrome",
+      "Adobe Photoshop",
+      "File Explorer"
+    ],
+    "correctAnswer": "Google Chrome"
+  },
+  {
+    "competency": "Communication",
+    "level": "A1",
+    "questionText": "What is a polite way to start an email to a teacher?",
+    "options": [
+      "Hey,",
+      "Yo!",
+      "Dear Mr./Ms. [Last Name],",
+      "To Whom It May Concern,"
+    ],
+    "correctAnswer": "Dear Mr./Ms. [Last Name],"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A1",
+    "questionText": "If a team member is struggling, what should you do?",
+    "options": [
+      "Ignore them",
+      "Tell the boss",
+      "Offer to help",
+      "Do their work for them"
+    ],
+    "correctAnswer": "Offer to help"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A1",
+    "questionText": "If your usual way to school is blocked, what do you do?",
+    "options": [
+      "Go home",
+      "Find an alternative route",
+      "Wait until it's clear",
+      "Panic"
+    ],
+    "correctAnswer": "Find an alternative route"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A1",
+    "questionText": "Your pen runs out of ink. What is the immediate solution?",
+    "options": [
+      "Buy a new pen later",
+      "Find another pen or pencil",
+      "Stop writing",
+      "Shake the pen"
+    ],
+    "correctAnswer": "Find another pen or pencil"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A1",
+    "questionText": "What does 'CC' mean in an email?",
+    "options": [
+      "Carbon Copy",
+      "Creative Commons",
+      "Closed Caption",
+      "Correct Copy"
+    ],
+    "correctAnswer": "Carbon Copy"
+  },
+  {
+    "competency": "Communication",
+    "level": "A1",
+    "questionText": "When someone is speaking to you, it is important to:",
+    "options": [
+      "Look at your phone",
+      "Interrupt them",
+      "Make eye contact and listen",
+      "Think about something else"
+    ],
+    "correctAnswer": "Make eye contact and listen"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A1",
+    "questionText": "What is a key part of working in a team?",
+    "options": [
+      "Doing everything yourself",
+      "Sharing ideas and responsibilities",
+      "Always being the leader",
+      "Never disagreeing"
+    ],
+    "correctAnswer": "Sharing ideas and responsibilities"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A1",
+    "questionText": "The project instructions change. What is the best first step?",
+    "options": [
+      "Complain about the change",
+      "Ignore the new instructions",
+      "Read the new instructions carefully",
+      "Ask a friend what to do"
+    ],
+    "correctAnswer": "Read the new instructions carefully"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A1",
+    "questionText": "You can't find your keys. What is a logical first step?",
+    "options": [
+      "Buy new locks",
+      "Retrace your steps",
+      "Assume they are lost forever",
+      "Ask a stranger"
+    ],
+    "correctAnswer": "Retrace your steps"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A1",
+    "questionText": "What is a strong password?",
+    "options": ["password123", "yourname", "Qp#z!8$T", "11111111"],
+    "correctAnswer": "Qp#z!8$T"
+  },
+  {
+    "competency": "Communication",
+    "level": "A1",
+    "questionText": "If you don't understand something, you should:",
+    "options": [
+      "Pretend you understand",
+      "Stay silent",
+      "Ask for clarification",
+      "Change the subject"
+    ],
+    "correctAnswer": "Ask for clarification"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A1",
+    "questionText": "A team needs to make a decision. What is a good approach?",
+    "options": [
+      "Let one person decide",
+      "Vote",
+      "Discuss the options together",
+      "Flip a coin"
+    ],
+    "correctAnswer": "Discuss the options together"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A1",
+    "questionText": "You are asked to use a new software tool. You should:",
+    "options": [
+      "Refuse to use it",
+      "Try to learn the basics",
+      "Say you already know it",
+      "Ask someone else to do your work"
+    ],
+    "correctAnswer": "Try to learn the basics"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A1",
+    "questionText": "You are given a task with a deadline. What should you do first?",
+    "options": [
+      "Start immediately",
+      "Plan the steps to complete the task",
+      "Wait until the last minute",
+      "Ask for an extension"
+    ],
+    "correctAnswer": "Plan the steps to complete the task"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A1",
+    "questionText": "What is 'phishing'?",
+    "options": [
+      "A type of fishing",
+      "A fun online game",
+      "A fraudulent attempt to get sensitive information",
+      "A social media trend"
+    ],
+    "correctAnswer": "A fraudulent attempt to get sensitive information"
+  },
+  {
+    "competency": "Communication",
+    "level": "A1",
+    "questionText": "What is the purpose of a meeting agenda?",
+    "options": [
+      "To make meetings longer",
+      "To outline the topics to be discussed",
+      "To take notes",
+      "To decide who speaks"
+    ],
+    "correctAnswer": "To outline the topics to be discussed"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A1",
+    "questionText": "Your team completes a project. What is a good final step?",
+    "options": [
+      "Forget about it immediately",
+      "Celebrate the success together",
+      "Blame someone for mistakes",
+      "Start a new project right away"
+    ],
+    "correctAnswer": "Celebrate the success together"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A1",
+    "questionText": "The fire alarm goes off during your work. What should you do?",
+    "options": [
+      "Keep working",
+      "Evacuate calmly following procedures",
+      "Grab your belongings first",
+      "Wait to see what others do"
+    ],
+    "correctAnswer": "Evacuate calmly following procedures"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A1",
+    "questionText": "Which is an example of a simple problem?",
+    "options": [
+      "Solving world hunger",
+      "Building a rocket",
+      "Deciding what to eat for lunch",
+      "Curing a disease"
+    ],
+    "correctAnswer": "Deciding what to eat for lunch"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A1",
+    "questionText": "How do you save a document in most applications?",
+    "options": [
+      "Pressing Esc",
+      "Using Ctrl+S or File > Save",
+      "Closing the application",
+      "Restarting the computer"
+    ],
+    "correctAnswer": "Using Ctrl+S or File > Save"
+  },
+  {
     "competency": "Problem Solving",
     "level": "A2",
     "questionText": "Which of these is a good strategy for breaking down a complex problem?",
@@ -19,27 +266,255 @@
     "correctAnswer": "Decomposition"
   },
   {
-    "competency": "Communication",
-    "level": "B1",
-    "questionText": "What is 'active listening'?",
+    "competency": "Digital Literacy",
+    "level": "A2",
+    "questionText": "What is the main purpose of a firewall?",
     "options": [
-      "Hearing words",
-      "Waiting for your turn to speak",
-      "Fully concentrating on what is being said",
-      "Interrupting to ask questions"
+      "To speed up the internet",
+      "To monitor network traffic and block unauthorized access",
+      "To store passwords",
+      "To clean computer viruses"
     ],
-    "correctAnswer": "Fully concentrating on what is being said"
+    "correctAnswer": "To monitor network traffic and block unauthorized access"
   },
   {
     "competency": "Communication",
-    "level": "B2",
-    "questionText": "When giving constructive feedback, it is best to focus on:",
+    "level": "A2",
+    "questionText": "What is the difference between hearing and listening?",
     "options": [
-      "The person's personality",
-      "The specific behavior or action",
-      "Your own feelings",
-      "General assumptions"
+      "There is no difference",
+      "Hearing is a physical ability, listening is a skill of paying attention",
+      "Listening is for music, hearing is for speech",
+      "Hearing is passive, listening is rude"
     ],
-    "correctAnswer": "The specific behavior or action"
+    "correctAnswer": "Hearing is a physical ability, listening is a skill of paying attention"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A2",
+    "questionText": "What is 'constructive feedback'?",
+    "options": [
+      "Negative criticism",
+      "Praise only",
+      "Helpful suggestions for improvement",
+      "Personal opinions"
+    ],
+    "correctAnswer": "Helpful suggestions for improvement"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A2",
+    "questionText": "Your project's priority has been changed by management. How should you react?",
+    "options": [
+      "Argue that the old priority was better",
+      "Secretly keep working on the old tasks",
+      "Adjust your work plan to the new priority",
+      "Complain to your colleagues"
+    ],
+    "correctAnswer": "Adjust your work plan to the new priority"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A2",
+    "questionText": "What does it mean to 'troubleshoot' an issue?",
+    "options": [
+      "To make a problem worse",
+      "To identify the cause of a problem through a systematic process",
+      "To ignore a problem",
+      "To create a new problem"
+    ],
+    "correctAnswer": "To identify the cause of a problem through a systematic process"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A2",
+    "questionText": "What is 'cloud computing'?",
+    "options": [
+      "Storing data on your personal computer",
+      "Using weather satellites",
+      "Delivering computing services over the internet",
+      "A type of laptop"
+    ],
+    "correctAnswer": "Delivering computing services over the internet"
+  },
+  {
+    "competency": "Communication",
+    "level": "A2",
+    "questionText": "Why is non-verbal communication (body language) important?",
+    "options": [
+      "It is not important",
+      "It can contradict or reinforce your words",
+      "It is only important on video calls",
+      "It replaces the need for words"
+    ],
+    "correctAnswer": "It can contradict or reinforce your words"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A2",
+    "questionText": "What is a 'conflict of interest' in a team?",
+    "options": [
+      "A simple disagreement",
+      "A situation where personal interests could interfere with professional duties",
+      "A type of team building exercise",
+      "When two people want to be leader"
+    ],
+    "correctAnswer": "A situation where personal interests could interfere with professional duties"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A2",
+    "questionText": "A new technology automates part of your job. What is a proactive response?",
+    "options": [
+      "Worry about being replaced",
+      "Learn how to use the new technology to enhance your work",
+      "Ignore the technology",
+      "Hope it goes away"
+    ],
+    "correctAnswer": "Learn how to use the new technology to enhance your work"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A2",
+    "questionText": "What is a 'root cause analysis'?",
+    "options": [
+      "A method to find the fundamental cause of a problem",
+      "A way to blame someone",
+      "A quick fix",
+      "A type of plant study"
+    ],
+    "correctAnswer": "A method to find the fundamental cause of a problem"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A2",
+    "questionText": "What is two-factor authentication (2FA)?",
+    "options": [
+      "Using two passwords",
+      "A security process requiring two different methods of identification",
+      "Logging in twice",
+      "A type of antivirus software"
+    ],
+    "correctAnswer": "A security process requiring two different methods of identification"
+  },
+  {
+    "competency": "Communication",
+    "level": "A2",
+    "questionText": "When communicating complex information, it is best to:",
+    "options": [
+      "Use as much jargon as possible",
+      "Speak very quickly",
+      "Break it down into simple, understandable parts",
+      "Assume everyone understands"
+    ],
+    "correctAnswer": "Break it down into simple, understandable parts"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A2",
+    "questionText": "What does it mean to be 'accountable' in a team?",
+    "options": [
+      "To be in charge",
+      "To take responsibility for your actions and outcomes",
+      "To blame others for mistakes",
+      "To keep a count of tasks"
+    ],
+    "correctAnswer": "To take responsibility for your actions and outcomes"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A2",
+    "questionText": "You receive feedback that your work needs improvement. How should you respond?",
+    "options": [
+      "Get defensive and argue",
+      "Listen to the feedback and ask clarifying questions",
+      "Ignore the feedback",
+      "Feel discouraged and give up"
+    ],
+    "correctAnswer": "Listen to the feedback and ask clarifying questions"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A2",
+    "questionText": "What is brainstorming?",
+    "options": [
+      "A type of weather",
+      "A technique to generate many ideas in a group",
+      "A way to criticize ideas",
+      "A formal debate"
+    ],
+    "correctAnswer": "A technique to generate many ideas in a group"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A2",
+    "questionText": "What is the difference between HTTP and HTTPS?",
+    "options": [
+      "HTTPS is faster",
+      "There is no difference",
+      "HTTPS is a secure, encrypted version of HTTP",
+      "HTTP is for images, HTTPS is for text"
+    ],
+    "correctAnswer": "HTTPS is a secure, encrypted version of HTTP"
+  },
+  {
+    "competency": "Communication",
+    "level": "A2",
+    "questionText": "What is an 'open-ended question'?",
+    "options": [
+      "A question with a 'yes' or 'no' answer",
+      "A question that encourages a detailed response",
+      "A question that has no answer",
+      "A rude question"
+    ],
+    "correctAnswer": "A question that encourages a detailed response"
+  },
+  {
+    "competency": "Teamwork",
+    "level": "A2",
+    "questionText": "A team member is not contributing. What is a good first step?",
+    "options": [
+      "Complain to other team members",
+      "Talk to the person privately to understand the issue",
+      "Do their work for them",
+      "Report them to management immediately"
+    ],
+    "correctAnswer": "Talk to the person privately to understand the issue"
+  },
+  {
+    "competency": "Adaptability",
+    "level": "A2",
+    "questionText": "Your company is merging with another. What is an adaptive mindset?",
+    "options": [
+      "Assume the worst will happen",
+      "Resist any changes to your routine",
+      "Be open to new processes and colleagues",
+      "Start looking for a new job immediately"
+    ],
+    "correctAnswer": "Be open to new processes and colleagues"
+  },
+  {
+    "competency": "Problem Solving",
+    "level": "A2",
+    "questionText": "After implementing a solution, what is the final step?",
+    "options": [
+      "Move on to the next problem",
+      "Review the outcome and see if it worked",
+      "Hope for the best",
+      "Take a break"
+    ],
+    "correctAnswer": "Review the outcome and see if it worked"
+  },
+  {
+    "competency": "Digital Literacy",
+    "level": "A2",
+    "questionText": "What is 'malware'?",
+    "options": [
+      "Computer hardware",
+      "A type of clothing",
+      "Software designed to harm your computer",
+      "A brand of computer"
+    ],
+    "correctAnswer": "Software designed to harm your computer"
   }
 ]

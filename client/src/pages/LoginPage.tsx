@@ -7,7 +7,7 @@ import Button from "../components/ui/Button";
 import FormError from "../components/ui/FormError";
 import Input from "../components/ui/Input";
 import Label from "../components/ui/Label";
-import { LoginFormData, loginSchema } from "../types/auth";
+import { type LoginFormData, loginSchema } from "../types/auth";
 
 const LoginPage = () => {
   const navigate = useNavigate();

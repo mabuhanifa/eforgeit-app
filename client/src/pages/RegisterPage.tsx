@@ -7,7 +7,7 @@ import Button from "../components/ui/Button";
 import FormError from "../components/ui/FormError";
 import Input from "../components/ui/Input";
 import Label from "../components/ui/Label";
-import { RegisterFormData, registerSchema } from "../types/auth";
+import { type RegisterFormData, registerSchema } from "../types/auth";
 
 const RegisterPage = () => {
   const navigate = useNavigate();

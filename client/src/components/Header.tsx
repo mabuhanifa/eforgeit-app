@@ -2,7 +2,7 @@ import { LogOut } from "lucide-react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../api/authApiSlice";
-import { RootState } from "../app/store";
+import { type RootState } from "../app/store";
 
 const Header = () => {
   const { accessToken, user } = useSelector((state: RootState) => state.auth);

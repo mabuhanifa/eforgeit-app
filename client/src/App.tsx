@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AssessmentPage from "./pages/AssessmentPage";
+import AssessmentResultPage from "./pages/AssessmentResultPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -19,7 +21,13 @@ export default function App() {
         <Route path="verify-otp" element={<OtpVerificationPage />} />
         <Route path="forgot-password" element={<ForgotPasswordPage />} />
         <Route path="reset-password/:token" element={<ResetPasswordPage />} />
-        <Route element={<ProtectedRoute />}></Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="assessment/take" element={<AssessmentPage />} />
+          <Route
+            path="assessment/result/:id"
+            element={<AssessmentResultPage />}
+          />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
