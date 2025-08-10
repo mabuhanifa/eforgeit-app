@@ -13,12 +13,14 @@ const ColdStartSpinner = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gray-900 bg-opacity-80 text-white backdrop-blur-sm">
-      <div className="text-white">
+    <div className="flex flex-grow flex-col items-center justify-center text-center">
+      <div className="text-indigo-600">
         <Spinner />
       </div>
-      <h2 className="mt-4 text-xl font-semibold">Waking up the server...</h2>
-      <p className="mt-2 text-gray-300">
+      <h2 className="mt-4 text-xl font-semibold text-gray-800">
+        Waking up the server...
+      </h2>
+      <p className="mt-2 text-gray-500">
         This may take a moment. Please wait ({countdown}s)
       </p>
     </div>
