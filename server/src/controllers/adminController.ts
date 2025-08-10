@@ -1,6 +1,8 @@
+import dotenv from "dotenv";
 import { Request, Response } from "express";
 import Assessment from "../models/Assessment";
 import User from "../models/User";
+dotenv.config();
 
 export const getUsers = async (req: Request, res: Response) => {
   const pageSize = 10;

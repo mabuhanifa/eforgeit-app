@@ -16,7 +16,6 @@ export const axiosBaseQuery =
     unknown
   > =>
   async ({ url, method, data, params, headers }, { getState }) => {
-    // Cast getState() to any to break circular dependency
     const token = (getState() as any).auth.accessToken;
     if (token) {
       headers = {

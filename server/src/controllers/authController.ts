@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import dotenv from "dotenv";
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import OTP from "../models/OTP";
@@ -6,6 +7,7 @@ import PasswordResetToken from "../models/PasswordResetToken";
 import User from "../models/User";
 import { sendEmail } from "../services/emailService";
 import { generateAccessToken, generateRefreshToken } from "../utils/tokenUtils";
+dotenv.config();
 
 const sendVerificationOtp = async (email: string) => {
   const otp = Math.floor(100000 + Math.random() * 900000).toString();
@@ -57,12 +59,9 @@ export const loginUser = async (req: Request, res: Response) => {
     const user = await User.findOne({ email });
     if (user && (await user.comparePassword(password))) {
       if (!user.isVerified) {
-        return res
-          .status(403)
-          .json({
-            message:
-              "Account not verified. Please check your email for an OTP.",
-          });
+        return res.status(403).json({
+          message: "Account not verified. Please check your email for an OTP.",
+        });
       }
       const accessToken = generateAccessToken(String(user._id));
       const refreshToken = generateRefreshToken(String(user._id));

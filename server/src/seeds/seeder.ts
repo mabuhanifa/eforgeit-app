@@ -3,7 +3,6 @@ import fs from "fs";
 import mongoose from "mongoose";
 import path from "path";
 
-// Load env vars
 dotenv.config();
 
 import Assessment from "../models/Assessment";
@@ -21,13 +20,10 @@ const questions = JSON.parse(
 
 const importData = async () => {
   try {
-    // Clear existing data
     await User.deleteMany();
     await Question.deleteMany();
     await Assessment.deleteMany();
 
-    // The pre-save hook in the User model will automatically hash passwords.
-    // We no longer need to hash them manually here.
     await User.create(users);
     await Question.create(questions);
 

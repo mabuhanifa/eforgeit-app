@@ -1,5 +1,7 @@
+import dotenv from "dotenv";
 import { Request, Response } from "express";
 import Question from "../models/Question";
+dotenv.config();
 
 // @desc    Create a new question
 // @route   POST /api/questions
@@ -17,12 +19,10 @@ export const createQuestion = async (req: Request, res: Response) => {
     const createdQuestion = await question.save();
     res.status(201).json(createdQuestion);
   } catch (error) {
-    res
-      .status(400)
-      .json({
-        message: "Invalid question data",
-        error: (error as Error).message,
-      });
+    res.status(400).json({
+      message: "Invalid question data",
+      error: (error as Error).message,
+    });
   }
 };
 
@@ -90,12 +90,10 @@ export const updateQuestion = async (req: Request, res: Response) => {
       res.status(404).json({ message: "Question not found" });
     }
   } catch (error) {
-    res
-      .status(400)
-      .json({
-        message: "Invalid question data",
-        error: (error as Error).message,
-      });
+    res.status(400).json({
+      message: "Invalid question data",
+      error: (error as Error).message,
+    });
   }
 };
 

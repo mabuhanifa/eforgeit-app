@@ -119,7 +119,7 @@ const AssessmentPage = () => {
             {isSubmitting ? "Submitting..." : "Submit Test"}
           </Button>
         ) : (
-          <Button onClick={handleNext} className="flex items-center gap-2">
+          <Button onClick={handleNext} className="flex items-center gap-2 ml-4">
             Next
             <ArrowRight size={16} />
           </Button>

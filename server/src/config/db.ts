@@ -4,7 +4,7 @@ export const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI as string);
     console.log(
-      `MongoDB connected successfully in ${process.env.NODE_ENV} mode at host: ${process.env.MONGO_URI}`
+      `MongoDB connected successfully in ${process.env.NODE_ENV} mode`
     );
   } catch (error) {
     console.error("MongoDB connection failed:", error);

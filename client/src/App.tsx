@@ -1,8 +1,14 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+import { useHealthCheckQuery } from "./api/appApiSlice";
+import { type RootState } from "./app/store";
 import AdminLayout from "./components/admin/AdminLayout";
 import AdminProtectedRoute from "./components/admin/AdminProtectedRoute";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ColdStartSpinner from "./components/ui/ColdStartSpinner";
+import { setApiReady } from "./features/app/appSlice";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import QuestionManagementPage from "./pages/admin/QuestionManagementPage";
 import UserManagementPage from "./pages/admin/UserManagementPage";
@@ -13,10 +19,25 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import OtpVerificationPage from "./pages/OtpVerificationPage";
+import ProfilePage from "./pages/ProfilePage";
 import RegisterPage from "./pages/RegisterPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 
 export default function App() {
+  const dispatch = useDispatch();
+  const { isApiReady } = useSelector((state: RootState) => state.app);
+  const { isSuccess, isError } = useHealthCheckQuery();
+
+  useEffect(() => {
+    if (isSuccess || isError) {
+      dispatch(setApiReady(true));
+    }
+  }, [isSuccess, isError, dispatch]);
+
+  if (!isApiReady) {
+    return <ColdStartSpinner />;
+  }
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -27,6 +48,7 @@ export default function App() {
         <Route path="forgot-password" element={<ForgotPasswordPage />} />
         <Route path="reset-password/:token" element={<ResetPasswordPage />} />
         <Route element={<ProtectedRoute />}>
+          <Route path="profile" element={<ProfilePage />} />
           <Route path="assessment/take" element={<AssessmentPage />} />
           <Route
             path="assessment/result/:id"

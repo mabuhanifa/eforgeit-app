@@ -3,13 +3,12 @@ import { logout, setCredentials } from "../features/auth/authSlice";
 import { axiosBaseQuery } from "./axiosBaseQuery";
 
 const baseQuery = axiosBaseQuery({
-  baseUrl: "http://localhost:5000/api",
+  baseUrl: "https://test-school-1trd.onrender.com/api",
 });
 
 const baseQueryWithReauth: BaseQueryFn = async (args, api, extraOptions) => {
   let result = await baseQuery(args, api, extraOptions);
 
-  // Handle the specific case where the user ID in the token is no longer valid
   if (
     (result.error as any)?.data?.message === "Not authorized, user not found"
   ) {
@@ -18,7 +17,6 @@ const baseQueryWithReauth: BaseQueryFn = async (args, api, extraOptions) => {
   }
 
   if (result.error && (result.error as any).status === 401) {
-    // Cast getState() to any to break circular dependency
     const refreshToken = (api.getState() as any).auth.refreshToken;
     if (refreshToken) {
       const refreshResult = await baseQuery(
@@ -36,7 +34,6 @@ const baseQueryWithReauth: BaseQueryFn = async (args, api, extraOptions) => {
         api.dispatch(setCredentials(newCredentials));
         result = await baseQuery(args, api, extraOptions);
       } else {
-        // If refresh fails, logout
         api.dispatch(logout());
       }
     }

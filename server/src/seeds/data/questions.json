@@ -516,5 +516,1061 @@
       "A brand of computer"
     ],
     "correctAnswer": "Software designed to harm your computer"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B1",
+    "questionText": "What is the difference between correlation and causation?",
+    "options": [
+      "They are the same",
+      "Correlation means two things happen together; causation means one thing causes another",
+      "Causation is a type of correlation",
+      "Correlation is stronger than causation"
+    ],
+    "correctAnswer": "Correlation means two things happen together; causation means one thing causes another"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B1",
+    "questionText": "A good leader should primarily focus on:",
+    "options": [
+      "Their own tasks",
+      "Micromanaging the team",
+      "Empowering and supporting the team to achieve goals",
+      "Being popular"
+    ],
+    "correctAnswer": "Empowering and supporting the team to achieve goals"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B1",
+    "questionText": "What is a budget?",
+    "options": [
+      "A plan for spending and saving money",
+      "A type of loan",
+      "A government tax",
+      "A stock market index"
+    ],
+    "correctAnswer": "A plan for spending and saving money"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B1",
+    "questionText": "What is empathy?",
+    "options": [
+      "Feeling sorry for someone",
+      "Understanding and sharing the feelings of another",
+      "Ignoring others' feelings",
+      "Agreeing with everyone"
+    ],
+    "correctAnswer": "Understanding and sharing the feelings of another"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B1",
+    "questionText": "What is a 'milestone' in a project?",
+    "options": [
+      "A type of rock",
+      "The start of the project",
+      "A significant point or event in a project",
+      "The end of the project"
+    ],
+    "correctAnswer": "A significant point or event in a project"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B1",
+    "questionText": "What is a 'bias'?",
+    "options": [
+      "A type of fabric cut",
+      "A fair and balanced view",
+      "A prejudice in favor of or against one thing, person, or group",
+      "A logical argument"
+    ],
+    "correctAnswer": "A prejudice in favor of or against one thing, person, or group"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B1",
+    "questionText": "How can a leader build trust within a team?",
+    "options": [
+      "By being secretive",
+      "By being consistent, reliable, and transparent",
+      "By never admitting mistakes",
+      "By making all decisions alone"
+    ],
+    "correctAnswer": "By being consistent, reliable, and transparent"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B1",
+    "questionText": "What is 'interest' in the context of a loan?",
+    "options": [
+      "A fun fact",
+      "The original amount of the loan",
+      "The cost of borrowing money",
+      "A discount on the loan"
+    ],
+    "correctAnswer": "The cost of borrowing money"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B1",
+    "questionText": "If you feel angry during a discussion, what is a good response?",
+    "options": [
+      "Shout to make your point",
+      "Leave the room without a word",
+      "Take a moment to calm down before responding",
+      "Insult the other person"
+    ],
+    "correctAnswer": "Take a moment to calm down before responding"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B1",
+    "questionText": "What is the 'scope' of a project?",
+    "options": [
+      "A type of telescope",
+      "The defined features and boundaries of a project",
+      "The project's budget",
+      "The project's team members"
+    ],
+    "correctAnswer": "The defined features and boundaries of a project"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B1",
+    "questionText": "An article claims a new diet pill guarantees weight loss. What should you do?",
+    "options": [
+      "Buy it immediately",
+      "Look for evidence and check the source's credibility",
+      "Tell all your friends",
+      "Assume it's true"
+    ],
+    "correctAnswer": "Look for evidence and check the source's credibility"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B1",
+    "questionText": "What is delegation?",
+    "options": [
+      "A group of people",
+      "Assigning tasks to others",
+      "Doing everything yourself",
+      "A type of negotiation"
+    ],
+    "correctAnswer": "Assigning tasks to others"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B1",
+    "questionText": "Why is it important to save money?",
+    "options": [
+      "It is not important",
+      "To prepare for emergencies and future goals",
+      "To spend it all at once",
+      "To impress others"
+    ],
+    "correctAnswer": "To prepare for emergencies and future goals"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B1",
+    "questionText": "What is self-awareness?",
+    "options": [
+      "Being aware of others",
+      "Having a conscious knowledge of one's own character and feelings",
+      "Being selfish",
+      "Never thinking about yourself"
+    ],
+    "correctAnswer": "Having a conscious knowledge of one's own character and feelings"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B1",
+    "questionText": "What is a 'risk' in a project?",
+    "options": [
+      "A guaranteed problem",
+      "A potential event that could negatively impact the project",
+      "A fun challenge",
+      "The project's goal"
+    ],
+    "correctAnswer": "A potential event that could negatively impact the project"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B1",
+    "questionText": "What is an 'assumption'?",
+    "options": [
+      "A proven fact",
+      "A thing that is accepted as true without proof",
+      "A logical conclusion",
+      "A scientific theory"
+    ],
+    "correctAnswer": "A thing that is accepted as true without proof"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B1",
+    "questionText": "A team member makes a mistake. A good leader will:",
+    "options": [
+      "Blame them publicly",
+      "Focus on finding a solution and learning from the mistake",
+      "Fire them immediately",
+      "Ignore the mistake"
+    ],
+    "correctAnswer": "Focus on finding a solution and learning from the mistake"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B1",
+    "questionText": "What is a credit score?",
+    "options": [
+      "The number of credit cards you have",
+      "A number representing a person's creditworthiness",
+      "Your bank account balance",
+      "A score in a game"
+    ],
+    "correctAnswer": "A number representing a person's creditworthiness"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B1",
+    "questionText": "How can you manage stress effectively?",
+    "options": [
+      "By ignoring it",
+      "Through exercise, mindfulness, or hobbies",
+      "By working longer hours",
+      "By complaining to everyone"
+    ],
+    "correctAnswer": "Through exercise, mindfulness, or hobbies"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B1",
+    "questionText": "What is a Gantt chart used for?",
+    "options": [
+      "Calculating budgets",
+      "Illustrating a project schedule",
+      "Storing documents",
+      "Team communication"
+    ],
+    "correctAnswer": "Illustrating a project schedule"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B1",
+    "questionText": "What does it mean to 'play devil's advocate'?",
+    "options": [
+      "To be evil",
+      "To argue against an idea for the sake of debate or to explore its weaknesses",
+      "To always disagree",
+      "To start a fight"
+    ],
+    "correctAnswer": "To argue against an idea for the sake of debate or to explore its weaknesses"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B1",
+    "questionText": "What is a key characteristic of a team's vision?",
+    "options": [
+      "It should be vague",
+      "It should be inspiring and provide direction",
+      "It should be easy to achieve",
+      "It should be kept secret"
+    ],
+    "correctAnswer": "It should be inspiring and provide direction"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B2",
+    "questionText": "What is a logical fallacy?",
+    "options": [
+      "A sound argument",
+      "A flaw in reasoning that makes an argument invalid",
+      "A type of puzzle",
+      "A scientific fact"
+    ],
+    "correctAnswer": "A flaw in reasoning that makes an argument invalid"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B2",
+    "questionText": "What is the difference between a manager and a leader?",
+    "options": [
+      "There is no difference",
+      "Managers administer, leaders innovate and inspire",
+      "Leaders have a higher salary",
+      "Managers work harder"
+    ],
+    "correctAnswer": "Managers administer, leaders innovate and inspire"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B2",
+    "questionText": "What is 'diversification' in investing?",
+    "options": [
+      "Putting all your money in one stock",
+      "Spreading investments across various assets to reduce risk",
+      "A type of savings account",
+      "Investing only in your home country"
+    ],
+    "correctAnswer": "Spreading investments across various assets to reduce risk"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B2",
+    "questionText": "What is 'intrinsic motivation'?",
+    "options": [
+      "Motivation from external rewards like money",
+      "Motivation driven by internal satisfaction and interest",
+      "Motivation from fear of punishment",
+      "Motivation from praise"
+    ],
+    "correctAnswer": "Motivation driven by internal satisfaction and interest"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B2",
+    "questionText": "What is the 'critical path' in project management?",
+    "options": [
+      "The easiest sequence of tasks",
+      "The longest sequence of tasks that determines the project's minimum duration",
+      "The list of all project risks",
+      "The path to the manager's office"
+    ],
+    "correctAnswer": "The longest sequence of tasks that determines the project's minimum duration"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B2",
+    "questionText": "What is the Socratic method?",
+    "options": [
+      "A method of teaching by asking and answering questions to stimulate critical thinking",
+      "A lecture-based teaching style",
+      "A way to win any argument",
+      "A type of scientific experiment"
+    ],
+    "correctAnswer": "A method of teaching by asking and answering questions to stimulate critical thinking"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B2",
+    "questionText": "What is 'transformational leadership'?",
+    "options": [
+      "A style focused on rules and procedures",
+      "A style where a leader works with teams to identify needed change and inspire a vision",
+      "A hands-off leadership style",
+      "A style based on rewards and punishments"
+    ],
+    "correctAnswer": "A style where a leader works with teams to identify needed change and inspire a vision"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B2",
+    "questionText": "What is 'compound interest'?",
+    "options": [
+      "Simple interest",
+      "Interest calculated on the initial principal and also on the accumulated interest",
+      "A lower interest rate",
+      "Interest paid only at the end of a loan"
+    ],
+    "correctAnswer": "Interest calculated on the initial principal and also on the accumulated interest"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B2",
+    "questionText": "How does emotional intelligence contribute to conflict resolution?",
+    "options": [
+      "It makes conflicts worse",
+      "By helping to understand different perspectives and manage emotions",
+      "It has no effect",
+      "By allowing you to manipulate others"
+    ],
+    "correctAnswer": "By helping to understand different perspectives and manage emotions"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B2",
+    "questionText": "What is an 'Agile' methodology?",
+    "options": [
+      "A rigid, sequential project management approach",
+      "An iterative approach to project management and software development",
+      "A method with no planning",
+      "A type of waterfall model"
+    ],
+    "correctAnswer": "An iterative approach to project management and software development"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B2",
+    "questionText": "What is 'confirmation bias'?",
+    "options": [
+      "The tendency to seek out information that confirms one's existing beliefs",
+      "A bias against confirmation",
+      "Being open to all ideas",
+      "A method for confirming facts"
+    ],
+    "correctAnswer": "The tendency to seek out information that confirms one's existing beliefs"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B2",
+    "questionText": "What is a 'SMART' goal?",
+    "options": [
+      "A goal that is easy",
+      "A goal that is Specific, Measurable, Achievable, Relevant, and Time-bound",
+      "A goal that is secret",
+      "A goal without a deadline"
+    ],
+    "correctAnswer": "A goal that is Specific, Measurable, Achievable, Relevant, and Time-bound"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B2",
+    "questionText": "What is an 'asset'?",
+    "options": [
+      "A liability or debt",
+      "A resource with economic value that is expected to provide a future benefit",
+      "Your monthly salary",
+      "A type of expense"
+    ],
+    "correctAnswer": "A resource with economic value that is expected to provide a future benefit"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B2",
+    "questionText": "What is 'social awareness' in the context of EI?",
+    "options": [
+      "Knowing about social media",
+      "The ability to understand the emotions and perspectives of others",
+      "Being the most popular person",
+      "Ignoring social cues"
+    ],
+    "correctAnswer": "The ability to understand the emotions and perspectives of others"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B2",
+    "questionText": "What is a 'stakeholder' in a project?",
+    "options": [
+      "Someone who holds stakes",
+      "Anyone with an interest or who may be affected by a project",
+      "Only the project manager",
+      "Only the client"
+    ],
+    "correctAnswer": "Anyone with an interest or who may be affected by a project"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B2",
+    "questionText": "What is Occam's Razor?",
+    "options": [
+      "A brand of shaving cream",
+      "A principle stating that the simplest explanation is usually the right one",
+      "A complex philosophical theory",
+      "A tool for cutting arguments"
+    ],
+    "correctAnswer": "A principle stating that the simplest explanation is usually the right one"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B2",
+    "questionText": "What is a key component of effective organizational change management?",
+    "options": [
+      "Forcing change without explanation",
+      "Clear and consistent communication",
+      "Ignoring employee concerns",
+      "Making changes suddenly"
+    ],
+    "correctAnswer": "Clear and consistent communication"
+  },
+  {
+    "competency": "Financial Literacy",
+    "level": "B2",
+    "questionText": "What is 'inflation'?",
+    "options": [
+      "The rate at which the general level of prices for goods and services is rising, and purchasing power is falling",
+      "When prices go down",
+      "A type of investment",
+      "A government surplus"
+    ],
+    "correctAnswer": "The rate at which the general level of prices for goods and services is rising, and purchasing power is falling"
+  },
+  {
+    "competency": "Emotional Intelligence",
+    "level": "B2",
+    "questionText": "What is 'self-regulation'?",
+    "options": [
+      "Letting your emotions run wild",
+      "The ability to control or redirect disruptive impulses and moods",
+      "Regulating others' emotions",
+      "A government agency"
+    ],
+    "correctAnswer": "The ability to control or redirect disruptive impulses and moods"
+  },
+  {
+    "competency": "Project Management",
+    "level": "B2",
+    "questionText": "What is 'scope creep'?",
+    "options": [
+      "When the project finishes early",
+      "When a project's scope expands beyond its original objectives",
+      "A type of project management software",
+      "A scary monster in the office"
+    ],
+    "correctAnswer": "When a project's scope expands beyond its original objectives"
+  },
+  {
+    "competency": "Critical Thinking",
+    "level": "B2",
+    "questionText": "What is the purpose of a peer review process in academia?",
+    "options": [
+      "To make publishing harder",
+      "To ensure the quality and validity of research before publication",
+      "To steal ideas",
+      "A formality with no real impact"
+    ],
+    "correctAnswer": "To ensure the quality and validity of research before publication"
+  },
+  {
+    "competency": "Leadership",
+    "level": "B2",
+    "questionText": "What is 'servant leadership'?",
+    "options": [
+      "A leadership style where the leader is the boss",
+      "A philosophy where the main goal of the leader is to serve the team",
+      "A style with no leader",
+      "A style only for non-profits"
+    ],
+    "correctAnswer": "A philosophy where the main goal of the leader is to serve the team"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C1",
+    "questionText": "What is a SWOT analysis?",
+    "options": [
+      "A project management tool",
+      "A framework for identifying Strengths, Weaknesses, Opportunities, and Threats",
+      "A financial statement",
+      "A marketing technique"
+    ],
+    "correctAnswer": "A framework for identifying Strengths, Weaknesses, Opportunities, and Threats"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C1",
+    "questionText": "What is a 'win-win' outcome in a negotiation?",
+    "options": [
+      "One party wins everything",
+      "Both parties lose",
+      "A mutually beneficial agreement where both parties feel satisfied",
+      "The negotiation fails"
+    ],
+    "correctAnswer": "A mutually beneficial agreement where both parties feel satisfied"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C1",
+    "questionText": "What is 'disruptive innovation'?",
+    "options": [
+      "An innovation that improves an existing product",
+      "An innovation that creates a new market and value network, eventually disrupting an existing market",
+      "An innovation that fails",
+      "A minor product update"
+    ],
+    "correctAnswer": "An innovation that creates a new market and value network, eventually disrupting an existing market"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C1",
+    "questionText": "What is the difference between quantitative and qualitative data?",
+    "options": [
+      "There is no difference",
+      "Quantitative is numerical data; qualitative is descriptive data",
+      "Quantitative is about quality; qualitative is about quantity",
+      "Qualitative data is more accurate"
+    ],
+    "correctAnswer": "Quantitative is numerical data; qualitative is descriptive data"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C1",
+    "questionText": "What is 'globalization'?",
+    "options": [
+      "The process of making something local",
+      "The process of interaction and integration among people, companies, and governments worldwide",
+      "A type of map",
+      "An environmental policy"
+    ],
+    "correctAnswer": "The process of interaction and integration among people, companies, and governments worldwide"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C1",
+    "questionText": "What is a 'Key Performance Indicator' (KPI)?",
+    "options": [
+      "A company's mission statement",
+      "A measurable value that demonstrates how effectively a company is achieving key business objectives",
+      "An employee's job title",
+      "A type of financial report"
+    ],
+    "correctAnswer": "A measurable value that demonstrates how effectively a company is achieving key business objectives"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C1",
+    "questionText": "What is BATNA in negotiation?",
+    "options": [
+      "A type of fruit",
+      "Best Alternative To a Negotiated Agreement",
+      "The first offer made",
+      "A negotiation tactic to confuse the other party"
+    ],
+    "correctAnswer": "Best Alternative To a Negotiated Agreement"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C1",
+    "questionText": "What is 'open innovation'?",
+    "options": [
+      "Innovating in an open field",
+      "A paradigm that assumes firms can and should use external ideas as well as internal ideas",
+      "Keeping all research and development secret",
+      "Innovating with the windows open"
+    ],
+    "correctAnswer": "A paradigm that assumes firms can and should use external ideas as well as internal ideas"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C1",
+    "questionText": "What is a 'data outlier'?",
+    "options": [
+      "The most common data point",
+      "A data point that is significantly different from other observations",
+      "The average of the data",
+      "A perfect data point"
+    ],
+    "correctAnswer": "A data point that is significantly different from other observations"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C1",
+    "questionText": "What is a 'cultural norm'?",
+    "options": [
+      "A law that applies globally",
+      "Unwritten rules of behavior shared by a group of people",
+      "A type of food",
+      "A universal greeting"
+    ],
+    "correctAnswer": "Unwritten rules of behavior shared by a group of people"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C1",
+    "questionText": "What is 'competitive advantage'?",
+    "options": [
+      "Having more employees than a competitor",
+      "A condition or circumstance that puts a company in a favorable or superior business position",
+      "Charging the lowest price",
+      "Having the nicest office"
+    ],
+    "correctAnswer": "A condition or circumstance that puts a company in a favorable or superior business position"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C1",
+    "questionText": "What is 'active listening' in negotiation?",
+    "options": [
+      "Waiting for your turn to speak",
+      "Fully concentrating on what is being said to understand the other party's needs and perspective",
+      "Planning your counter-argument while the other person is speaking",
+      "Pretending to listen"
+    ],
+    "correctAnswer": "Fully concentrating on what is being said to understand the other party's needs and perspective"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C1",
+    "questionText": "What is 'design thinking'?",
+    "options": [
+      "A type of graphic design",
+      "A human-centered, iterative process for creative problem solving",
+      "A linear process for engineering",
+      "Thinking about design"
+    ],
+    "correctAnswer": "A human-centered, iterative process for creative problem solving"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C1",
+    "questionText": "What is 'data visualization'?",
+    "options": [
+      "Storing data in a table",
+      "The graphical representation of data to help understand trends and insights",
+      "A type of database",
+      "Hiding data"
+    ],
+    "correctAnswer": "The graphical representation of data to help understand trends and insights"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C1",
+    "questionText": "What is a 'tariff'?",
+    "options": [
+      "A type of animal",
+      "A tax imposed on imported goods and services",
+      "A free trade agreement",
+      "A currency"
+    ],
+    "correctAnswer": "A tax imposed on imported goods and services"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C1",
+    "questionText": "What is a 'mission statement'?",
+    "options": [
+      "A statement of the purpose of a company, its reason for existing",
+      "A company's financial goals",
+      "A list of employees",
+      "A marketing slogan"
+    ],
+    "correctAnswer": "A statement of the purpose of a company, its reason for existing"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C1",
+    "questionText": "What is an 'anchor' in negotiation?",
+    "options": [
+      "A tool for a boat",
+      "The final agreement",
+      "The first offer made, which can influence the rest of the negotiation",
+      "A neutral third party"
+    ],
+    "correctAnswer": "The first offer made, which can influence the rest of the negotiation"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C1",
+    "questionText": "What is a 'prototype'?",
+    "options": [
+      "The final product",
+      "An early sample, model, or release of a product built to test a concept or process",
+      "A marketing plan",
+      "A type of software"
+    ],
+    "correctAnswer": "An early sample, model, or release of a product built to test a concept or process"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C1",
+    "questionText": "What is 'A/B testing'?",
+    "options": [
+      "A test with two questions",
+      "A method of comparing two versions of a webpage or app against each other to determine which one performs better",
+      "A type of academic exam",
+      "A test of the alphabet"
+    ],
+    "correctAnswer": "A method of comparing two versions of a webpage or app against each other to determine which one performs better"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C1",
+    "questionText": "What does the term 'emerging market' refer to?",
+    "options": [
+      "A market that is disappearing",
+      "A nation's economy that is progressing toward becoming more advanced",
+      "A stock market",
+      "A local farmers market"
+    ],
+    "correctAnswer": "A nation's economy that is progressing toward becoming more advanced"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C1",
+    "questionText": "What is 'scalability' in a business context?",
+    "options": [
+      "The weight of a product",
+      "The ability of a business or system to grow to meet increased demand",
+      "A company's profit margin",
+      "A measure of customer satisfaction"
+    ],
+    "correctAnswer": "The ability of a business or system to grow to meet increased demand"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C1",
+    "questionText": "Why is building rapport important in negotiation?",
+    "options": [
+      "It is not important",
+      "It helps create a more positive and collaborative atmosphere",
+      "It is a sign of weakness",
+      "It guarantees you will win"
+    ],
+    "correctAnswer": "It helps create a more positive and collaborative atmosphere"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C2",
+    "questionText": "What is the core idea behind Blue Ocean Strategy?",
+    "options": [
+      "Competing in existing market space",
+      "Creating uncontested market space and making the competition irrelevant",
+      "Focusing only on marketing",
+      "Reducing product quality to lower costs"
+    ],
+    "correctAnswer": "Creating uncontested market space and making the competition irrelevant"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C2",
+    "questionText": "What is principled negotiation?",
+    "options": [
+      "A negotiation style focused on winning at all costs",
+      "A method that focuses on interests, not positions, and seeks mutual gain",
+      "A style where you never compromise",
+      "A negotiation based on emotions"
+    ],
+    "correctAnswer": "A method that focuses on interests, not positions, and seeks mutual gain"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C2",
+    "questionText": "What is the 'Innovator's Dilemma'?",
+    "options": [
+      "The choice between two good innovations",
+      "The concept that successful companies can fail by doing everything right, as they miss out on disruptive innovations",
+      "The difficulty of finding innovative people",
+      "A book about Apple"
+    ],
+    "correctAnswer": "The concept that successful companies can fail by doing everything right, as they miss out on disruptive innovations"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C2",
+    "questionText": "What is 'predictive modeling'?",
+    "options": [
+      "A process that uses data mining and probability to forecast outcomes",
+      "A model of the past",
+      "A way to visualize data",
+      "A type of database schema"
+    ],
+    "correctAnswer": "A process that uses data mining and probability to forecast outcomes"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C2",
+    "questionText": "What is 'geopolitics'?",
+    "options": [
+      "The study of geography",
+      "The study of the effects of geography on politics and international relations",
+      "A political party",
+      "A type of rock formation"
+    ],
+    "correctAnswer": "The study of the effects of geography on politics and international relations"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C2",
+    "questionText": "What is a 'value proposition'?",
+    "options": [
+      "The price of a product",
+      "A promise of value to be delivered, and a belief from the customer that value will be experienced",
+      "A company's stock price",
+      "A marketing tagline"
+    ],
+    "correctAnswer": "A promise of value to be delivered, and a belief from the customer that value will be experienced"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C2",
+    "questionText": "In a multi-party negotiation, what is a 'coalition'?",
+    "options": [
+      "A type of conflict",
+      "An alliance of parties who agree to cooperate to advance their common interests",
+      "A neutral mediator",
+      "The final agreement"
+    ],
+    "correctAnswer": "An alliance of parties who agree to cooperate to advance their common interests"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C2",
+    "questionText": "What is a 'minimum viable product' (MVP)?",
+    "options": [
+      "The final, perfect product",
+      "A version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort",
+      "A product with no features",
+      "A failed prototype"
+    ],
+    "correctAnswer": "A version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C2",
+    "questionText": "What is 'machine learning'?",
+    "options": [
+      "A field of AI that gives computers the ability to learn without being explicitly programmed",
+      "A type of robot",
+      "A way to manually analyze data",
+      "A computer that learns languages"
+    ],
+    "correctAnswer": "A field of AI that gives computers the ability to learn without being explicitly programmed"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C2",
+    "questionText": "What is the role of the World Trade Organization (WTO)?",
+    "options": [
+      "To provide loans to developing countries",
+      "To regulate international trade between nations",
+      "To manage global currency exchange rates",
+      "A global charity organization"
+    ],
+    "correctAnswer": "To regulate international trade between nations"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C2",
+    "questionText": "What is 'game theory' in a business context?",
+    "options": [
+      "The theory of video games",
+      "The study of mathematical models of strategic interaction among rational decision-makers",
+      "A way to make business fun",
+      "A type of marketing strategy"
+    ],
+    "correctAnswer": "The study of mathematical models of strategic interaction among rational decision-makers"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C2",
+    "questionText": "What is a 'zero-sum' negotiation?",
+    "options": [
+      "A negotiation where both parties can win",
+      "A situation where one person's gain is equivalent to another's loss",
+      "A negotiation with no outcome",
+      "A negotiation about the number zero"
+    ],
+    "correctAnswer": "A situation where one person's gain is equivalent to another's loss"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C2",
+    "questionText": "What is 'reverse innovation'?",
+    "options": [
+      "An innovation that fails",
+      "An innovation seen first, or likely to be used first, in the developing world before spreading to the industrialized world",
+      "Stealing an innovation",
+      "An old innovation"
+    ],
+    "correctAnswer": "An innovation seen first, or likely to be used first, in the developing world before spreading to the industrialized world"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C2",
+    "questionText": "What is 'big data'?",
+    "options": [
+      "A large spreadsheet",
+      "Extremely large and complex data sets that may be analyzed computationally to reveal patterns and trends",
+      "A type of hard drive",
+      "Data that is not important"
+    ],
+    "correctAnswer": "Extremely large and complex data sets that may be analyzed computationally to reveal patterns and trends"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C2",
+    "questionText": "What is 'hegemony' in international relations?",
+    "options": [
+      "A state of perfect balance",
+      "The political, economic, or military predominance or control of one state over others",
+      "A type of international treaty",
+      "A form of democracy"
+    ],
+    "correctAnswer": "The political, economic, or military predominance or control of one state over others"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C2",
+    "questionText": "What are Porter's Five Forces?",
+    "options": [
+      "A model for marketing",
+      "A framework for analyzing the level of competition within an industry",
+      "A set of financial ratios",
+      "A leadership theory"
+    ],
+    "correctAnswer": "A framework for analyzing the level of competition within an industry"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C2",
+    "questionText": "What is the 'endowment effect' in negotiation?",
+    "options": [
+      "A charitable donation",
+      "The tendency for people to overvalue something that they own",
+      "The final outcome of a negotiation",
+      "A negotiation tactic"
+    ],
+    "correctAnswer": "The tendency for people to overvalue something that they own"
+  },
+  {
+    "competency": "Innovation",
+    "level": "C2",
+    "questionText": "What is a 'patent'?",
+    "options": [
+      "A type of business license",
+      "A government authority or license conferring a right or title for a set period, especially the sole right to exclude others from making, using, or selling an invention",
+      "A scientific paper",
+      "A brand trademark"
+    ],
+    "correctAnswer": "A government authority or license conferring a right or title for a set period, especially the sole right to exclude others from making, using, or selling an invention"
+  },
+  {
+    "competency": "Data Analysis",
+    "level": "C2",
+    "questionText": "What is 'unstructured data'?",
+    "options": [
+      "Data that is perfectly organized",
+      "Information that either does not have a pre-defined data model or is not organized in a pre-defined manner",
+      "Incorrect data",
+      "Data in a spreadsheet"
+    ],
+    "correctAnswer": "Information that either does not have a pre-defined data model or is not organized in a pre-defined manner"
+  },
+  {
+    "competency": "Global Awareness",
+    "level": "C2",
+    "questionText": "What is 'soft power'?",
+    "options": [
+      "Military force",
+      "The ability to attract and co-opt, rather than coerce, through cultural or political values",
+      "Economic sanctions",
+      "A weak form of power"
+    ],
+    "correctAnswer": "The ability to attract and co-opt, rather than coerce, through cultural or political values"
+  },
+  {
+    "competency": "Strategic Thinking",
+    "level": "C2",
+    "questionText": "What is a 'contingency plan'?",
+    "options": [
+      "The main project plan",
+      "A plan designed to take a possible future event or circumstance into account",
+      "A plan that is guaranteed to work",
+      "A financial budget"
+    ],
+    "correctAnswer": "A plan designed to take a possible future event or circumstance into account"
+  },
+  {
+    "competency": "Negotiation",
+    "level": "C2",
+    "questionText": "What is 'logrolling' in negotiation?",
+    "options": [
+      "A type of sport",
+      "A practice of exchanging favors, especially in politics by reciprocal voting for each other's proposed legislation",
+      "An aggressive negotiation tactic",
+      "Ending a negotiation"
+    ],
+    "correctAnswer": "A practice of exchanging favors, especially in politics by reciprocal voting for each other's proposed legislation"
   }
 ]

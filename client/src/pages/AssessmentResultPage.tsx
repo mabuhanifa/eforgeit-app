@@ -1,18 +1,27 @@
 import html2pdf from "html2pdf.js";
 import { Download } from "lucide-react";
 import { useRef } from "react";
+import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useStartAssessmentMutation } from "../api/assessmentApiSlice";
 import { type RootState } from "../app/store";
 import DigitalCertificate from "../components/assessment/DigitalCertificate";
 import Button from "../components/ui/Button";
-import { resetAssessment } from "../features/assessment/assessmentSlice";
+import {
+  resetAssessment,
+  startTest,
+} from "../features/assessment/assessmentSlice";
 
 const AssessmentResultPage = () => {
   const certificateRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { lastResult } = useSelector((state: RootState) => state.assessment);
   const { user } = useSelector((state: RootState) => state.auth);
+
+  const [startAssessment, { isLoading: isStartingNext }] =
+    useStartAssessmentMutation();
 
   const handleDownload = () => {
     if (certificateRef.current) {
@@ -29,6 +38,16 @@ const AssessmentResultPage = () => {
 
   const handleGoHome = () => {
     dispatch(resetAssessment());
+  };
+
+  const handleStartNextTest = async () => {
+    try {
+      const data = await startAssessment(undefined).unwrap();
+      dispatch(startTest(data));
+      navigate("/assessment/take");
+    } catch (err: any) {
+      toast.error(err.data?.message || "Failed to start next assessment.");
+    }
   };
 
   if (!lastResult) {
@@ -62,19 +81,28 @@ const AssessmentResultPage = () => {
         completionDate={new Date().toLocaleDateString()}
       />
 
-      <div className="mt-8 flex justify-center gap-4">
+      <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <Button
           onClick={handleDownload}
-          className="flex items-center gap-2 bg-green-600 hover:bg-green-700"
+          className="flex w-full items-center justify-center gap-2 bg-green-600 hover:bg-green-700 sm:w-auto"
         >
           <Download size={16} />
           Download Certificate
         </Button>
-        <Link to="/" onClick={handleGoHome}>
-          <Button className="bg-gray-600 hover:bg-gray-700">
+        <Link to="/" onClick={handleGoHome} className="w-full sm:w-auto">
+          <Button className="w-full bg-gray-600 hover:bg-gray-700 sm:w-auto">
             Back to Home
           </Button>
         </Link>
+        {unlocksNextStep && (
+          <Button
+            onClick={handleStartNextTest}
+            disabled={isStartingNext}
+            className="w-full bg-indigo-600 hover:bg-indigo-700 sm:w-auto"
+          >
+            {isStartingNext ? "Starting..." : "Start Next Assessment"}
+          </Button>
+        )}
       </div>
     </div>
   );

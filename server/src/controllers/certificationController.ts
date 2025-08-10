@@ -1,6 +1,8 @@
+import dotenv from "dotenv";
 import { Response } from "express";
 import { AuthRequest } from "../middleware/authMiddleware";
 import Assessment from "../models/Assessment";
+dotenv.config();
 
 export const getMyCertification = async (req: AuthRequest, res: Response) => {
   const user = req.user!;

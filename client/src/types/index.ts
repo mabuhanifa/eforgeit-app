@@ -4,6 +4,7 @@ export interface User {
   email: string;
   role: "Student" | "Admin" | "Supervisor";
   isVerified: boolean;
+  failedStep1: boolean;
 }
 
 export interface Question {

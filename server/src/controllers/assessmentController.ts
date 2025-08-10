@@ -1,9 +1,11 @@
+import dotenv from "dotenv";
 import { Response } from "express";
 import { AuthRequest } from "../middleware/authMiddleware";
 import Assessment from "../models/Assessment";
 import Question from "../models/Question";
 import { sendEmail } from "../services/emailService";
 import { calculateScoreAndLevel } from "../services/scoringService";
+dotenv.config();
 
 interface UserAnswer {
   questionId: string;

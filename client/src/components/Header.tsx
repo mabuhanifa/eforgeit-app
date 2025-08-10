@@ -1,4 +1,4 @@
-import { LogOut, Shield } from "lucide-react";
+import { LogOut, Shield, UserCircle } from "lucide-react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../api/authApiSlice";
@@ -33,6 +33,13 @@ const Header = () => {
                   <span className="hidden md:inline">Admin Panel</span>
                 </Link>
               )}
+              <Link
+                to="/profile"
+                className="rounded p-2 hover:bg-gray-700"
+                title="My Profile"
+              >
+                <UserCircle size={18} />
+              </Link>
               <button
                 onClick={handleLogout}
                 className="rounded p-2 hover:bg-gray-700"

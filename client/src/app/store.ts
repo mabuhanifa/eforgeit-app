@@ -4,16 +4,18 @@ import { combineReducers } from "redux";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { baseApi } from "../api/baseApi";
+import appReducer from "../features/app/appSlice";
 import assessmentReducer from "../features/assessment/assessmentSlice";
 import authReducer from "../features/auth/authSlice";
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["auth"],
+  whitelist: ["auth"], // persist only auth slice
 };
 
 const rootReducer = combineReducers({
+  app: appReducer,
   auth: authReducer,
   assessment: assessmentReducer,
   [baseApi.reducerPath]: baseApi.reducer,
