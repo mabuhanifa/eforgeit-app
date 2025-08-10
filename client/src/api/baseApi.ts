@@ -3,7 +3,7 @@ import { logout, setCredentials } from "../features/auth/authSlice";
 import { axiosBaseQuery } from "./axiosBaseQuery";
 
 const baseQuery = axiosBaseQuery({
-  baseUrl: "https://test-school-1trd.onrender.com/api",
+  baseUrl: `${import.meta.env.VITE_API_BASE_URL}/api`,
 });
 
 const baseQueryWithReauth: BaseQueryFn = async (args, api, extraOptions) => {

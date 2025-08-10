@@ -1,69 +1,74 @@
-# React + TypeScript + Vite
+# Test_School - Client Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the Test_School Competency Assessment Platform, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Technology Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: React.js
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **State Management**: Redux Toolkit & RTK Query
+- **Routing**: React Router DOM
+- **Form Handling**: React Hook Form
+- **Schema Validation**: Zod
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these instructions to get the client application running on your local machine.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Node.js (v18 or later recommended)
+- npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
+### Installation
+
+1.  **Navigate to the client directory:**
+
+    ```bash
+    cd client
+    ```
+
+2.  **Install NPM packages:**
+    ```bash
+    npm install
+    ```
+
+### Environment Variables
+
+The client application needs to know the URL of the backend API.
+
+1.  Create a local environment file by copying the example file:
+
+    ```bash
+    cp .env.example .env.local
+    ```
+
+2.  Open the `.env.local` file. The default value should be correct for local development:
+    ```
+    VITE_API_BASE_URL=http://localhost:5000
+    ```
+
+### Running the Application
+
+1.  **Important:** Make sure the backend server is running first. (See the `server/README.md` for instructions).
+
+2.  **Start the client development server:**
+    ```bash
+    npm run dev
+    ```
+
+The application will now be available at `http://localhost:5173`.
+parserOptions: {
+project: ['./tsconfig.node.json', './tsconfig.app.json'],
+tsconfigRootDir: import.meta.dirname,
+},
+// other options...
+},
+},
 ])
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
