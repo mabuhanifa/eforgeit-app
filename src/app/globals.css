@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+@theme {
+  /* Color Palette */
+  --color-postgres-blue: #336791;
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Base styles for MDX content */
+.prose {
+  @apply text-gray-700;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply font-bold tracking-tight text-gray-900 mb-4 mt-8;
+}
+.prose h1 {
+  @apply text-4xl;
+}
+.prose h2 {
+  @apply text-3xl border-b pb-2;
+}
+.prose h3 {
+  @apply text-2xl;
+}
+.prose h4 {
+  @apply text-xl;
+}
+.prose p,
+.prose ul,
+.prose ol {
+  @apply leading-7 mb-4;
+}
+.prose a {
+  @apply text-postgres-blue hover:underline;
+}
+.prose ul {
+  @apply list-disc pl-6;
+}
+.prose ol {
+  @apply list-decimal pl-6;
+}
+.prose pre {
+  @apply mb-4 rounded-lg;
+}
+.prose code {
+  @apply font-mono;
+}
+.prose code:not(in-pre) {
+  @apply bg-gray-100 rounded px-1 py-0.5 text-sm;
+}
