@@ -21,9 +21,15 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.1
+      '@next/mdx':
+        specifier: ^15.5.2
+        version: 15.5.2
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.13
+      '@types/mdx':
+        specifier: ^2.0.13
+        version: 2.0.13
       '@types/node':
         specifier: ^20
         version: 20.19.13
@@ -266,6 +272,17 @@ packages:
   '@next/eslint-plugin-next@15.5.2':
     resolution: {integrity: sha512-lkLrRVxcftuOsJNhWatf1P2hNVfh98k/omQHrCEPPriUypR6RcS13IvLdIrEvkm9AH2Nu2YpR5vLqBuy6twH3Q==}
 
+  '@next/mdx@15.5.2':
+    resolution: {integrity: sha512-Lz9mdoKRfSNc7T1cSk3gzryhRcc7ErsiAWba1HBoInCX4ZpGUQXmiZLAAyrIgDl7oS/UHxsgKtk2qp/Df4gKBg==}
+    peerDependencies:
+      '@mdx-js/loader': '>=0.15.0'
+      '@mdx-js/react': '>=0.15.0'
+    peerDependenciesMeta:
+      '@mdx-js/loader':
+        optional: true
+      '@mdx-js/react':
+        optional: true
+
   '@next/swc-darwin-arm64@15.5.2':
     resolution: {integrity: sha512-8bGt577BXGSd4iqFygmzIfTYizHb0LGWqH+qgIF/2EDxS5JsSdERJKA8WgwDyNBZgTIIA4D8qUtoQHmxIIquoQ==}
     engines: {node: '>= 10'}
@@ -438,6 +455,9 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+
+  '@types/mdx@2.0.13':
+    resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
 
   '@types/node@20.19.13':
     resolution: {integrity: sha512-yCAeZl7a0DxgNVteXFHt9+uyFbqXGy/ShC4BlcHkoE0AfGXYv/BUiplV72DjMYXHDBXFjhvr6DD1NiRVfB4j8g==}
@@ -1632,6 +1652,10 @@ packages:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
 
+  source-map@0.7.6:
+    resolution: {integrity: sha512-i5uvt8C3ikiWeNZSVZNWcfZPItFQOsYTUAOkcUPGd8DqDy1uOUikjt5dG+uRlwyvR108Fb9DOd4GvXfT0N2/uQ==}
+    engines: {node: '>= 12'}
+
   stable-hash@0.0.5:
     resolution: {integrity: sha512-+L3ccpzibovGXFK+Ap/f8LOS0ahMrHTf3xu7mMLSpEGU0EO9ucaysSylKo9eRDFNhWve/y275iPmIZ4z39a9iA==}
 
@@ -1990,6 +2014,10 @@ snapshots:
     dependencies:
       fast-glob: 3.3.1
 
+  '@next/mdx@15.5.2':
+    dependencies:
+      source-map: 0.7.6
+
   '@next/swc-darwin-arm64@15.5.2':
     optional: true
 
@@ -2118,6 +2146,8 @@ snapshots:
   '@types/json-schema@7.0.15': {}
 
   '@types/json5@0.0.29': {}
+
+  '@types/mdx@2.0.13': {}
 
   '@types/node@20.19.13':
     dependencies:
@@ -3531,6 +3561,8 @@ snapshots:
     optional: true
 
   source-map-js@1.2.1: {}
+
+  source-map@0.7.6: {}
 
   stable-hash@0.0.5: {}
 

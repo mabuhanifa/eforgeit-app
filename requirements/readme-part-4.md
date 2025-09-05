@@ -1,0 +1,28 @@
+- Core Features & Use Cases
+- 1.1 Installation & Setup
+  - Installing on macOS (Homebrew)
+  - Installing on Windows (Installer, WSL)
+  - Installing on Linux (APT, YUM)
+  - Using Docker for Development
+  - Connecting with psql and GUI Tools (DBeaver, Postico)
+- 1.2 SQL Basics: Querying Data
+  - The SELECT and FROM Clauses
+  - Filtering with WHERE
+  - Sorting with ORDER BY
+  - Limiting Results with LIMIT and OFFSET
+  - Column Aliases with AS
+- 1.3 SQL Basics: DDL & DML
+  - CREATE TABLE
+  - INSERT INTO
+  - UPDATE
+  - DELETE FROM
+  - ALTER TABLE
+  - DROP TABLE
+- 1.4 Core Data Types
+  - Numeric Types (INTEGER, BIGINT, NUMERIC)
+  - Character Types (VARCHAR, TEXT, CHAR)
+  - Date/Time Types (TIMESTAMP, DATE, TIME)
+  - Boolean Type
+  - The SERIAL Pseudo-Type
+- 1.5 Table Design & Constraints
+  - Primary Keys
