@@ -1,0 +1,37 @@
+# Set Operations
+
+Set operations combine the results of two or more `SELECT` statements into a single result set. The queries must have the same number of columns, and the data types of corresponding columns must be compatible.
+
+### UNION and UNION ALL
+
+- `UNION`: Combines the result sets of two or more `SELECT` statements and removes duplicate rows.
+- `UNION ALL`: Combines the result sets but includes all duplicate rows. It is faster than `UNION` because it doesn't need to check for duplicates.
+
+```sql
+-- Get a list of all cities where we have either a customer or a supplier
+SELECT city FROM customers
+UNION
+SELECT city FROM suppliers;
+```
+
+### INTERSECT
+
+Returns only the rows that appear in both result sets.
+
+```sql
+-- Get cities where we have both a customer and a supplier
+SELECT city FROM customers
+INTERSECT
+SELECT city FROM suppliers;
+```
+
+### EXCEPT
+
+Returns the rows from the first query's result set that do not appear in the second query's result set.
+
+```sql
+-- Get cities where we have a customer but not a supplier
+SELECT city FROM customers
+EXCEPT
+SELECT city FROM suppliers;
+```

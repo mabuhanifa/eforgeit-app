@@ -9,22 +9,22 @@
   --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
+@custom-variant dark (&:where(.dark, .dark *));
 /* Base styles for MDX content */
 .prose {
-  @apply text-gray-700;
+  @apply text-gray-700 dark:text-gray-300;
 }
 .prose h1,
 .prose h2,
 .prose h3,
 .prose h4 {
-  @apply font-bold tracking-tight text-gray-900 mb-4 mt-8;
+  @apply font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4 mt-8;
 }
 .prose h1 {
   @apply text-4xl;
 }
 .prose h2 {
-  @apply text-3xl border-b pb-2;
+  @apply text-3xl border-b pb-2 border-gray-200 dark:border-gray-700;
 }
 .prose h3 {
   @apply text-2xl;
@@ -53,5 +53,5 @@
   @apply font-mono;
 }
 .prose code:not(in-pre) {
-  @apply bg-gray-100 rounded px-1 py-0.5 text-sm;
+  @apply bg-gray-100 rounded px-1 py-0.5 text-sm dark:bg-gray-800 dark:text-gray-300;
 }

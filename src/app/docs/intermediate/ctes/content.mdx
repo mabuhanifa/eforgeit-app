@@ -1,0 +1,51 @@
+# Common Table Expressions (CTEs)
+
+A Common Table Expression (CTE) allows you to define a temporary, named result set that you can reference within a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement. CTEs are defined using the `WITH` clause.
+
+### The WITH Clause
+
+CTEs help break down complex queries into simpler, more readable logical blocks.
+
+```sql
+WITH department_salaries AS (
+    SELECT
+        department_id,
+        AVG(salary) as avg_dept_salary
+    FROM employees
+    GROUP BY department_id
+)
+SELECT
+    e.first_name,
+    e.salary,
+    ds.avg_dept_salary
+FROM employees e
+JOIN department_salaries ds ON e.department_id = ds.department_id
+WHERE e.salary > ds.avg_dept_salary;
+```
+
+### Recursive CTEs
+
+A recursive CTE is one that references itself. They are useful for querying hierarchical data, such as organizational charts or bill-of-materials.
+
+A recursive CTE must have two parts:
+
+1.  **Anchor member**: A query that returns the base result set.
+2.  **Recursive member**: A query that references the CTE itself, joined with the anchor member. It must be combined with the anchor member using `UNION ALL`.
+
+```sql
+-- Find all subordinates of a manager with employee_id = 1
+WITH RECURSIVE subordinates AS (
+    -- Anchor member: select the direct reports
+    SELECT employee_id, manager_id, first_name
+    FROM employees
+    WHERE employee_id = 1
+
+    UNION ALL
+
+    -- Recursive member: join employees with the CTE
+    SELECT e.employee_id, e.manager_id, e.first_name
+    FROM employees e
+    INNER JOIN subordinates s ON s.employee_id = e.manager_id
+)
+SELECT * FROM subordinates;
+```

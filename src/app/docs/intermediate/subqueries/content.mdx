@@ -1,0 +1,58 @@
+# Subqueries
+
+A subquery, or inner query, is a query nested inside another SQL query. It can be used in `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statements, or inside another subquery.
+
+### Subqueries in WHERE Clauses
+
+This is the most common use case. The subquery returns a single value or a list of values that are used as a condition in the outer query.
+
+```sql
+-- Find employees who work in the 'Sales' department
+SELECT first_name, last_name
+FROM employees
+WHERE department_id = (
+    SELECT department_id FROM departments WHERE department_name = 'Sales'
+);
+```
+
+### Subqueries in FROM Clauses (Derived Tables)
+
+When a subquery is used in the `FROM` clause, it creates a temporary table (also known as a derived table) that the outer query can then select from.
+
+```sql
+SELECT
+    avg_salary_by_dept.department_name,
+    avg_salary_by_dept.average_salary
+FROM (
+    SELECT
+        d.department_name,
+        AVG(e.salary) as average_salary
+    FROM employees e
+    JOIN departments d ON e.department_id = d.department_id
+    GROUP BY d.department_name
+) AS avg_salary_by_dept
+WHERE avg_salary_by_dept.average_salary > 60000;
+```
+
+### Correlated Subqueries
+
+A correlated subquery is a subquery that depends on the outer query for its values. It is evaluated once for each row processed by the outer query.
+
+<Callout type="warning">
+  Correlated subqueries can be inefficient. Often, a `JOIN` or CTE is a
+  better-performing alternative.
+</Callout>
+
+```sql
+-- Find employees whose salary is above the average for their department
+SELECT
+    employee_id,
+    first_name,
+    salary
+FROM employees e1
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees e2
+    WHERE e2.department_id = e1.department_id
+);
+```
