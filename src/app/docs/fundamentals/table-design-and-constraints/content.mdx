@@ -1,0 +1,62 @@
+# Table Design & Constraints
+
+Constraints are rules enforced on data columns in a table. They are used to ensure the accuracy and reliability of the data.
+
+### Primary Keys
+
+A primary key uniquely identifies each record in a table. It must contain unique values and cannot contain NULL values.
+
+```sql
+CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50)
+);
+```
+
+### Foreign Keys
+
+A foreign key is a key used to link two tables together. It is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table.
+
+```sql
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    employee_id INTEGER REFERENCES employees(employee_id),
+    order_date DATE
+);
+```
+
+### NOT NULL Constraint
+
+Ensures that a column cannot have a NULL value.
+
+```sql
+CREATE TABLE products (
+    product_id SERIAL PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    price NUMERIC NOT NULL
+);
+```
+
+### UNIQUE Constraint
+
+Ensures that all values in a column are different.
+
+```sql
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+```
+
+### CHECK Constraint
+
+Ensures that all values in a column satisfy a specific condition.
+
+```sql
+CREATE TABLE products (
+    product_id SERIAL PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    price NUMERIC CHECK (price > 0)
+);
+```

@@ -1,0 +1,72 @@
+# SQL Basics: DDL & DML
+
+SQL commands are divided into several categories. Two of the most fundamental are Data Definition Language (DDL) and Data Manipulation Language (DML).
+
+- **DDL** is used to define and manage the structure of your database objects (like tables).
+- **DML** is used to add, modify, or remove the data within those structures.
+
+## Data Definition Language (DDL)
+
+DDL commands are used to build and modify the structure of your tables and other objects in the database.
+
+### CREATE TABLE
+
+Creates a new table in the database.
+
+```sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### ALTER TABLE
+
+Modifies an existing table's structure, such as adding or dropping a column.
+
+```sql
+ALTER TABLE users
+ADD COLUMN is_active BOOLEAN DEFAULT TRUE;
+```
+
+### DROP TABLE
+
+Deletes a table and all the data within it. Be careful with this command!
+
+```sql
+DROP TABLE users;
+```
+
+## Data Manipulation Language (DML)
+
+DML commands are used to manage the data within your tables.
+
+### INSERT INTO
+
+Adds a new row of data into a table.
+
+```sql
+INSERT INTO users (username, email)
+VALUES ('john_doe', 'john.doe@example.com');
+```
+
+### UPDATE
+
+Modifies existing records in a table.
+
+```sql
+UPDATE users
+SET is_active = FALSE
+WHERE username = 'john_doe';
+```
+
+### DELETE FROM
+
+Removes records from a table.
+
+```sql
+DELETE FROM users
+WHERE username = 'john_doe';
+```

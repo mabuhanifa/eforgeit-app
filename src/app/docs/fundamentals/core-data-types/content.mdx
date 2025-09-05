@@ -1,0 +1,62 @@
+# Core Data Types
+
+Choosing the correct data type is crucial for data integrity and performance. PostgreSQL offers a rich set of native data types.
+
+### Numeric Types
+
+Used for storing numbers.
+
+- `INTEGER` or `INT`: For whole numbers.
+- `BIGINT`: For very large whole numbers.
+- `NUMERIC(precision, scale)` or `DECIMAL`: For numbers with exact precision, like monetary values.
+- `REAL` or `FLOAT8`: For floating-point numbers.
+
+### Character Types
+
+Used for storing strings of text.
+
+- `VARCHAR(n)`: For text with a maximum length.
+- `TEXT`: For text of unlimited length.
+- `CHAR(n)`: For fixed-length strings.
+
+### Date/Time Types
+
+Used for storing date and time values.
+
+- `TIMESTAMP`: Both date and time. `TIMESTAMP WITH TIME ZONE` (`TIMESTAMPTZ`) is usually recommended.
+- `DATE`: Only the date.
+- `TIME`: Only the time of day.
+- `INTERVAL`: A duration of time.
+
+### Boolean Type
+
+A boolean type can hold one of three states: `TRUE`, `FALSE`, or `NULL`.
+
+```sql
+CREATE TABLE products (
+    is_available BOOLEAN
+);
+```
+
+### The SERIAL Pseudo-Type
+
+`SERIAL` is not a true type, but a shorthand for creating a unique identifier column. It creates an integer column and sets its default value from a sequence.
+
+```sql
+CREATE TABLE logs (
+    log_id SERIAL PRIMARY KEY,
+    log_message TEXT
+);
+```
+
+This is equivalent to:
+
+```sql
+CREATE SEQUENCE logs_log_id_seq;
+CREATE TABLE logs (
+    log_id INTEGER NOT NULL DEFAULT nextval('logs_log_id_seq'),
+    log_message TEXT,
+    PRIMARY KEY (log_id)
+);
+ALTER SEQUENCE logs_log_id_seq OWNED BY logs.log_id;
+```
