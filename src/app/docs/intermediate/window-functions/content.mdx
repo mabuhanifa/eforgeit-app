@@ -1,42 +1,79 @@
 # Window Functions
 
-A window function performs a calculation across a set of table rows that are somehow related to the current row. This is comparable to the type of calculation that can be done with an aggregate function. But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row.
+Window functions perform calculations across a set of table rows that are somehow related to the current row. This is comparable to the type of calculation that can be done with an aggregate function. However, window functions do not cause rows to become grouped into a single output row like non-window aggregate calls do. Instead, the rows retain their separate identities.
 
-### Introduction to Window Functions
+## Syntax
 
-The basic syntax is `function_name() OVER (PARTITION BY ... ORDER BY ...)`.
-
-- `PARTITION BY`: Divides the rows into partitions (groups). The function is applied independently to each partition.
-- `ORDER BY`: Orders the rows within each partition.
-
-### Ranking Functions
-
-- `ROW_NUMBER()`: Assigns a unique number to each row within its partition.
-- `RANK()`: Assigns a rank to each row. Skips ranks after ties.
-- `DENSE_RANK()`: Assigns a rank to each row. Does not skip ranks after ties.
+The basic syntax for a window function is:
 
 ```sql
--- Rank employees by salary within each department
-SELECT
-    first_name,
-    salary,
-    department_name,
-    RANK() OVER (PARTITION BY department_name ORDER BY salary DESC) as salary_rank
-FROM employees
-JOIN departments ON employees.department_id = departments.department_id;
+FUNCTION_NAME() OVER (
+    [PARTITION BY partition_expression, ...]
+    [ORDER BY sort_expression [ASC | DESC], ...]
+)
 ```
 
-### Aggregate Window Functions
+-   `PARTITION BY`: Divides the rows into partitions (groups) to which the function is applied.
+-   `ORDER BY`: Orders rows within each partition.
 
-You can use aggregate functions like `SUM()`, `AVG()`, and `COUNT()` as window functions.
+## Ranking Functions
+
+Ranking functions assign a rank to each row within a partition of a result set.
+
+### `ROW_NUMBER()`
+
+Assigns a unique number to each row, starting from 1, based on the ordering within the partition.
 
 ```sql
--- Show each employee's salary along with the average salary for their department
 SELECT
-    first_name,
+    employee_name,
+    department,
     salary,
-    department_name,
-    AVG(salary) OVER (PARTITION BY department_name) as avg_department_salary
-FROM employees
-JOIN departments ON employees.department_id = departments.department_id;
+    ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) as rank_in_dept
+FROM employees;
 ```
+
+### `RANK()`
+
+Assigns a rank to each row. If two rows have the same value, they get the same rank. The next rank is skipped. (e.g., 1, 2, 2, 4).
+
+```sql
+SELECT
+    employee_name,
+    department,
+    salary,
+    RANK() OVER (PARTITION BY department ORDER BY salary DESC) as rank_in_dept
+FROM employees;
+```
+
+### `DENSE_RANK()`
+
+Similar to `RANK()`, but it does not skip ranks after a tie. (e.g., 1, 2, 2, 3).
+
+```sql
+SELECT
+    employee_name,
+    department,
+    salary,
+    DENSE_RANK() OVER (PARTITION BY department ORDER BY salary DESC) as rank_in_dept
+FROM employees;
+```
+
+## Aggregate Window Functions
+
+You can use common aggregate functions like `SUM()`, `AVG()`, `COUNT()`, `MAX()`, and `MIN()` as window functions.
+
+### `SUM()`
+
+Calculate a running total of salaries within each department.
+
+```sql
+SELECT
+    employee_name,
+    department,
+    salary,
+    SUM(salary) OVER (PARTITION BY department ORDER BY employee_name) as running_total
+FROM employees;
+```
+
+This calculates the cumulative salary for each employee within their department, ordered by name.
