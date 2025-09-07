@@ -73,6 +73,27 @@ const docsConfig = {
         },
       ],
     },
+    {
+      title: "Administration",
+      items: [
+        {
+          title: "User Management & Security",
+          href: "/docs/administration/user-management-security",
+        },
+        {
+          title: "Backup & Recovery",
+          href: "/docs/administration/backup-recovery",
+        },
+        {
+          title: "Replication",
+          href: "/docs/administration/replication",
+        },
+        {
+          title: "Performance Tuning",
+          href: "/docs/administration/performance-tuning",
+        },
+      ],
+    },
   ],
 };
 

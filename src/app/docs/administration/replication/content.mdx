@@ -1,0 +1,25 @@
+# Replication
+
+Replication is the process of copying and maintaining database objects in multiple databases. It enhances availability, scalability, and fault tolerance.
+
+## Streaming Replication
+
+PostgreSQL's built-in replication feature is called streaming replication. It works by having standby servers connect to a primary server and stream WAL records as they are generated.
+
+### Key Concepts
+
+- **Primary Server**: The main read/write server.
+- **Standby Server (Replica)**: A read-only copy of the primary server. It can be promoted to a primary if the original primary fails.
+- **Hot Standby**: A standby server that can accept read-only queries.
+
+### Setting up Replication
+
+1.  **Configure the Primary Server**: Modify `postgresql.conf` to enable replication (e.g., set `wal_level = replica`, `max_wal_senders`).
+2.  **Configure `pg_hba.conf` on Primary**: Allow the standby server to connect.
+3.  **Create a Base Backup**: Use `pg_basebackup` to create an initial copy of the primary on the standby server.
+4.  **Configure the Standby Server**: Create a `standby.signal` file and configure `postgresql.conf` with connection info to the primary.
+5.  **Start the Standby Server**.
+
+## Logical Replication
+
+Logical replication is a method of replicating data objects and their changes, based upon their replication identity (usually a primary key). It allows for more flexibility than streaming replication, such as replicating between different major versions of PostgreSQL or replicating only a subset of tables.

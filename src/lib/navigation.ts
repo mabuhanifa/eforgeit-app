@@ -74,10 +74,19 @@ export const navigation = [
   {
     title: "Part 4: Administration",
     links: [
-      { title: "User Management & Security", href: "/docs/admin/security" },
-      { title: "Backup & Recovery", href: "/docs/admin/backup-and-recovery" },
-      { title: "Replication", href: "/docs/admin/replication" },
-      { title: "Performance Tuning", href: "/docs/admin/performance-tuning" },
+      {
+        title: "User Management & Security",
+        href: "/docs/administration/user-management-security",
+      },
+      {
+        title: "Backup & Recovery",
+        href: "/docs/administration/backup-recovery",
+      },
+      { title: "Replication", href: "/docs/administration/replication" },
+      {
+        title: "Performance Tuning",
+        href: "/docs/administration/performance-tuning",
+      },
     ],
   },
 ];

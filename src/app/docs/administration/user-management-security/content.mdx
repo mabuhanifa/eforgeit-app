@@ -1,0 +1,59 @@
+# User Management & Security
+
+Proper user management is crucial for database security. PostgreSQL uses the concept of roles to manage database permissions.
+
+## Roles
+
+In PostgreSQL, a role can be a user, a group, or both. Roles can own database objects (like tables) and can grant privileges on those objects to other roles.
+
+### Creating Roles
+
+You can create a new role (user) with `CREATE ROLE` or `CREATE USER`. `CREATE USER` is an alias for `CREATE ROLE` but it implies `LOGIN` by default.
+
+```sql
+-- Create a role that can log in
+CREATE ROLE new_user WITH LOGIN PASSWORD 'secure_password';
+
+-- Or using CREATE USER
+CREATE USER another_user WITH PASSWORD 'another_password';
+```
+
+### Granting Privileges
+
+Privileges define what a role can do with database objects.
+
+```sql
+-- Grant connect privilege to the database
+GRANT CONNECT ON DATABASE my_database TO new_user;
+
+-- Grant usage on a schema
+GRANT USAGE ON SCHEMA public TO new_user;
+
+-- Grant specific privileges on a table
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE my_table TO new_user;
+
+-- Grant all privileges on a table
+GRANT ALL PRIVILEGES ON TABLE my_table TO new_user;
+```
+
+### Revoking Privileges
+
+To remove privileges, use the `REVOKE` command.
+
+```sql
+REVOKE INSERT ON my_table FROM new_user;
+```
+
+## Row-Level Security
+
+For fine-grained access control, PostgreSQL offers Row-Level Security (RLS). RLS allows you to define policies that restrict which rows a user can view or modify.
+
+```sql
+-- Enable RLS on a table
+ALTER TABLE user_accounts ENABLE ROW LEVEL SECURITY;
+
+-- Create a policy that only allows users to see their own rows
+CREATE POLICY user_policy ON user_accounts
+FOR SELECT
+USING (username = current_user);
+```

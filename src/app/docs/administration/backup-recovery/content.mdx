@@ -1,0 +1,39 @@
+# Backup & Recovery
+
+Regular backups are essential for protecting your data against loss. PostgreSQL provides several ways to back up and restore your database.
+
+## SQL Dump using `pg_dump`
+
+The `pg_dump` utility creates a text file with SQL commands that, when fed back to the server, will recreate the database in the state it was in at the time of the dump.
+
+### Backing up a database
+
+```bash
+pg_dump -U your_user -d your_database -f backup.sql
+```
+
+This creates a plain-text SQL script file. For larger databases, it's better to use the custom format (`-Fc`).
+
+```bash
+pg_dump -U your_user -d your_database -Fc -f backup.dump
+```
+
+### Restoring from a dump
+
+For plain-text dumps, you can use `psql`.
+
+```bash
+psql -U your_user -d new_database < backup.sql
+```
+
+For custom-format dumps, you must use `pg_restore`.
+
+```bash
+pg_restore -U your_user -d new_database backup.dump
+```
+
+## Point-in-Time Recovery (PITR)
+
+For more robust backup strategies, PostgreSQL offers Point-in-Time Recovery (PITR). This involves continuous archiving of the Write-Ahead Log (WAL) files, allowing you to restore the database to any point in time.
+
+Setting up PITR is more involved and requires configuring `postgresql.conf` and setting up an archive command. It provides a much lower Recovery Point Objective (RPO).

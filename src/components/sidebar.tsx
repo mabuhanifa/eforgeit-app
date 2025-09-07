@@ -22,7 +22,7 @@ export function Sidebar() {
                       className={`block rounded-md px-3 py-1.5 text-sm transition-colors ${
                         pathname === link.href
                           ? "bg-blue-100 text-blue-700 font-medium"
-                          : "hover:bg-gray-100"
+                          : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
                       }`}
                     >
                       {link.title}
