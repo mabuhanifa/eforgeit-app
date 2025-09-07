@@ -1,0 +1,41 @@
+# Views & Materialized Views
+
+Views are virtual tables that represent the result of a stored query. They can be used to simplify complex queries, provide a layer of abstraction, and enforce security.
+
+## Views
+
+A view does not store data itself. Instead, every time you query a view, the database re-runs the view's underlying query.
+
+```sql
+CREATE VIEW high_value_orders AS
+SELECT order_id, customer_name, order_total
+FROM orders
+WHERE order_total > 1000;
+
+-- Now you can query the view like a regular table
+SELECT * FROM high_value_orders;
+```
+
+## Materialized Views
+
+A materialized view, on the other hand, is a database object that contains the results of a query, just like a physical table. The data is stored on disk and can be indexed.
+
+```sql
+CREATE MATERIALIZED VIEW daily_sales_summary AS
+SELECT
+    transaction_date,
+    SUM(amount) as total_sales
+FROM sales
+GROUP BY transaction_date;
+```
+
+The data in a materialized view is not updated automatically. You must refresh it manually.
+
+```sql
+REFRESH MATERIALIZED VIEW daily_sales_summary;
+```
+
+<Callout>
+  Use materialized views for complex, expensive queries that are accessed
+  frequently but whose underlying data does not change often.
+</Callout>

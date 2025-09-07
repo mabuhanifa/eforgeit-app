@@ -55,16 +55,19 @@ export const navigation = [
       { title: "Indexing for Performance", href: "/docs/advanced/indexing" },
       {
         title: "Transactions & Concurrency",
-        href: "/docs/advanced/transactions",
+        href: "/docs/advanced/transactions-concurrency",
       },
       {
         title: "Advanced Data Types",
         href: "/docs/advanced/advanced-data-types",
       },
-      { title: "Views & Materialized Views", href: "/docs/advanced/views" },
+      {
+        title: "Views & Materialized Views",
+        href: "/docs/advanced/views-materialized-views",
+      },
       {
         title: "Functions & Stored Procedures",
-        href: "/docs/advanced/functions-and-procedures",
+        href: "/docs/advanced/functions-stored-procedures",
       },
     ],
   },

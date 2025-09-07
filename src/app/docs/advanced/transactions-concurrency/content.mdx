@@ -1,0 +1,44 @@
+# Transactions & Concurrency
+
+A database transaction is a sequence of operations performed as a single logical unit of work. Transactions ensure data integrity by adhering to the ACID properties.
+
+## ACID Properties
+
+- **Atomicity**: Ensures that all operations within a work unit are completed successfully. Otherwise, the transaction is aborted, and all changes are rolled back.
+- **Consistency**: Ensures that the database properly changes states upon a successfully committed transaction.
+- **Isolation**: Enables transactions to operate independently of and transparent to each other.
+- **Durability**: Ensures that the result of a committed transaction survives permanently, even in cases of system failure.
+
+## Managing Transactions
+
+You can control transactions using `BEGIN`, `COMMIT`, and `ROLLBACK`.
+
+```sql
+BEGIN;
+
+UPDATE accounts SET balance = balance - 100.00 WHERE name = 'Alice';
+UPDATE accounts SET balance = balance + 100.00 WHERE name = 'Bob';
+
+-- If everything is correct
+COMMIT;
+
+-- If something went wrong
+-- ROLLBACK;
+```
+
+## Concurrency and Isolation Levels
+
+When multiple transactions run concurrently, they can interfere with each other. PostgreSQL prevents this using different isolation levels:
+
+- **Read Uncommitted**: The lowest level. One transaction may see uncommitted changes made by another. (Not available in PostgreSQL).
+- **Read Committed**: Default level. A transaction sees only data committed before it began.
+- **Repeatable Read**: Guarantees that if a transaction reads a row multiple times, the result is the same.
+- **Serializable**: The highest level. It emulates serial transaction execution, as if transactions were running one after another.
+
+You can set the isolation level for a transaction like this:
+
+```sql
+BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+-- your statements
+COMMIT;
+```

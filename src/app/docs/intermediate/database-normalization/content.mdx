@@ -5,6 +5,7 @@ Database normalization is the process of organizing columns and tables in a rela
 ## First Normal Form (1NF)
 
 A table is in 1NF if it meets the following criteria:
+
 1.  Each column contains atomic (indivisible) values.
 2.  Each column contains values of the same type.
 3.  Each row is unique.
@@ -12,25 +13,26 @@ A table is in 1NF if it meets the following criteria:
 
 **Example:**
 
-Consider a table that is *not* in 1NF:
+Consider a table that is _not_ in 1NF:
 
-| order_id | customer_name | items                 |
-| :------- | :------------ | :-------------------- |
-| 101      | Alice         | 'Laptop, Mouse'       |
-| 102      | Bob           | 'Keyboard, Monitor'   |
+| order_id | customer_name | items               |
+| :------- | :------------ | :------------------ |
+| 101      | Alice         | 'Laptop, Mouse'     |
+| 102      | Bob           | 'Keyboard, Monitor' |
 
 To bring this to 1NF, we split the `items` into separate rows:
 
-| order_id | customer_name | item     |
-| :------- | :------------ | :------- |
-| 101      | Alice         | 'Laptop' |
-| 101      | Alice         | 'Mouse'  |
-| 102      | Bob           | 'Keyboard'|
-| 102      | Bob           | 'Monitor'|
+| order_id | customer_name | item       |
+| :------- | :------------ | :--------- |
+| 101      | Alice         | 'Laptop'   |
+| 101      | Alice         | 'Mouse'    |
+| 102      | Bob           | 'Keyboard' |
+| 102      | Bob           | 'Monitor'  |
 
 ## Second Normal Form (2NF)
 
 A table is in 2NF if:
+
 1.  It is in 1NF.
 2.  All non-key attributes are fully functionally dependent on the entire primary key. This rule applies to tables with composite primary keys.
 
@@ -48,23 +50,24 @@ Here, `product_name` depends only on `product_id`, and `customer_name` depends o
 **Orders Table:**
 | order_id | customer_name |
 | :------- | :------------ |
-| 101      | 'Alice'       |
+| 101 | 'Alice' |
 
 **Products Table:**
 | product_id | product_name |
 | :--------- | :----------- |
-| 1          | 'Laptop'     |
-| 2          | 'Mouse'      |
+| 1 | 'Laptop' |
+| 2 | 'Mouse' |
 
 **Order_Items Table:**
 | order_id | product_id | quantity |
 | :------- | :--------- | :------- |
-| 101      | 1          | 1        |
-| 101      | 2          | 1        |
+| 101 | 1 | 1 |
+| 101 | 2 | 1 |
 
 ## Third Normal Form (3NF)
 
 A table is in 3NF if:
+
 1.  It is in 2NF.
 2.  There are no transitive dependencies (i.e., non-key attributes do not depend on other non-key attributes).
 
@@ -80,13 +83,13 @@ Consider this table:
 Here, `author_nationality` depends on `author_id`, which is a non-key attribute. This is a transitive dependency. To achieve 3NF, we split the table:
 
 **Books Table:**
-| book_id | title      | author_id |
+| book_id | title | author_id |
 | :------ | :--------- | :-------- |
-| 1       | 'SQL 101'  | 5         |
-| 2       | 'Postgres' | 6         |
+| 1 | 'SQL 101' | 5 |
+| 2 | 'Postgres' | 6 |
 
 **Authors Table:**
 | author_id | author_nationality |
 | :-------- | :----------------- |
-| 5         | 'USA'              |
-| 6         | 'UK'               |
+| 5 | 'USA' |
+| 6 | 'UK' |

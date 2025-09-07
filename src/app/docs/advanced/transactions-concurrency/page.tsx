@@ -1,6 +1,17 @@
 "use client";
+
+import { Callout } from "@/components/callout";
+import { MDXProvider } from "@mdx-js/react";
 import Content from "./content.mdx";
 
-export default function Page() {
-  return <Content />;
+const components = {
+  Callout,
+};
+
+export default function TransactionsConcurrencyPage() {
+  return (
+    <MDXProvider components={components}>
+      <Content />
+    </MDXProvider>
+  );
 }

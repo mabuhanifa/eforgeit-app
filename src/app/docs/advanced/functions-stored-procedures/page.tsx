@@ -8,7 +8,7 @@ const components = {
   Callout,
 };
 
-export default function ViewsPage() {
+export default function FunctionsPage() {
   return (
     <MDXProvider components={components}>
       <Content />

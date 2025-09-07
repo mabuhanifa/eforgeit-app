@@ -3,7 +3,6 @@
 import { Header } from "@/components/header";
 import { Pager } from "@/components/pager";
 import { Sidebar } from "@/components/sidebar";
-import { MDXProvider } from "@mdx-js/react";
 
 const docsConfig = {
   sidebarNav: [
@@ -54,7 +53,7 @@ const docsConfig = {
       items: [
         {
           title: "Indexing for Performance",
-          href: "/docs/advanced/indexing-for-performance",
+          href: "/docs/advanced/indexing",
         },
         {
           title: "Transactions & Concurrency",
@@ -67,6 +66,10 @@ const docsConfig = {
         {
           title: "Views & Materialized Views",
           href: "/docs/advanced/views-materialized-views",
+        },
+        {
+          title: "Functions & Stored Procedures",
+          href: "/docs/advanced/functions-stored-procedures",
         },
       ],
     },
@@ -86,9 +89,7 @@ export default function DocsLayout({
           <Sidebar items={docsConfig.sidebarNav} />
           <main className="relative py-6 lg:gap-10 lg:py-8 w-full lg:pl-8">
             <div className="mx-auto w-full min-w-0">
-              <div className="prose max-w-none">
-                <MDXProvider>{children}</MDXProvider>
-              </div>
+              <div className="prose max-w-none">{children}</div>
               <Pager />
             </div>
           </main>

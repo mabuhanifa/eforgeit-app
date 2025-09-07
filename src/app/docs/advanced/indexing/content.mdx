@@ -1,0 +1,47 @@
+# Indexing for Performance
+
+Database indexes are a way to speed up the retrieval of rows from a table. Think of them like an index in a book: instead of scanning every page to find a topic, you can look it up in the index and go directly to the right page.
+
+## Why Use Indexes?
+
+When you run a query without an index on the columns in your `WHERE` clause, PostgreSQL has to perform a "sequential scan," reading every single row in the table to find the ones that match. For large tables, this can be very slow.
+
+An index is a separate data structure that stores the values of a specific column (or columns) in a way that's easy to search. When you query an indexed column, PostgreSQL can use the index to quickly find the location of the matching rows and retrieve them, avoiding a full table scan.
+
+## Common Index Types in PostgreSQL
+
+PostgreSQL offers several index types to cater to different kinds of queries.
+
+- **B-Tree**: The default and most common index type. It's great for equality (`=`) and range (`<`, `>`, `<=`, `>=`) queries on data that can be sorted.
+- **Hash**: Only useful for simple equality comparisons (`=`). They are not transaction-safe and need to be manually rebuilt after crashes, so their use is generally discouraged in favor of B-Trees.
+- **GiST (Generalized Search Tree)**: A framework for building various indexing schemes for complex data types, such as geometric data and full-text search.
+- **SP-GiST (Space-Partitioned GiST)**: A development of GiST for non-balanced data structures, like quadtrees.
+- **GIN (Generalized Inverted Index)**: Best for indexing composite values where elements can appear multiple times, like the words in a text document or elements in an array.
+- **BRIN (Block Range INdexes)**: Designed for very large tables where certain columns have a natural correlation with their physical location in the table (e.g., a timestamp column on an append-only table). They are very small and cheap to maintain.
+
+## Creating an Index
+
+The syntax for creating an index is straightforward. Let's say we have a `users` table and we frequently query it by `email`.
+
+```sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Now, let's add an index to the email column
+CREATE INDEX idx_users_email ON users (email);
+```
+
+With `idx_users_email` in place, queries like `SELECT * FROM users WHERE email = 'test@example.com';` will be significantly faster on a large table.
+
+## When Not to Index
+
+Indexes are not a silver bullet. They come with trade-offs:
+
+- **Write Performance**: Every `INSERT`, `UPDATE`, or `DELETE` on an indexed column requires a corresponding write to the index, which slows down write operations.
+- **Storage Space**: Indexes take up disk space.
+
+Generally, you should index columns that are frequently used in `WHERE` clauses and `JOIN` conditions. Avoid indexing columns with low cardinality (few unique values) or columns that are not often queried.

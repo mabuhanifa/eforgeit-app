@@ -1,0 +1,67 @@
+# Advanced Data Types
+
+PostgreSQL supports a rich set of data types beyond the standard SQL ones.
+
+## JSON and JSONB
+
+PostgreSQL has two types for storing JSON data: `json` and `jsonb`.
+
+- `json`: Stores an exact copy of the input text.
+- `jsonb`: Stores data in a decomposed binary format, which is slightly slower to input but much faster to process, and it supports indexing.
+
+<Callout>
+  It's almost always recommended to use `jsonb` because of its performance
+  benefits and indexing support.
+</Callout>
+
+Example:
+
+```sql
+CREATE TABLE products (
+    id serial PRIMARY KEY,
+    name text,
+    attributes jsonb
+);
+
+INSERT INTO products (name, attributes) VALUES
+('Laptop', '{"brand": "BrandX", "specs": {"ram": 16, "storage": 512}}');
+
+-- Querying JSONB data
+SELECT name, attributes->'brand' AS brand FROM products;
+```
+
+## Arrays
+
+PostgreSQL allows columns of a table to be defined as variable-length multidimensional arrays.
+
+```sql
+CREATE TABLE sales (
+    id serial PRIMARY KEY,
+    quarterly_revenue integer[]
+);
+
+INSERT INTO sales (quarterly_revenue) VALUES
+('{10000, 12000, 15000, 11000}');
+
+-- Accessing an array element
+SELECT quarterly_revenue[2] FROM sales; -- returns 12000
+```
+
+## Composite Types
+
+A composite type represents the structure of a row or record; it is essentially just a list of field names and their data types.
+
+```sql
+CREATE TYPE inventory_item AS (
+    name            text,
+    supplier_id     integer,
+    price           numeric
+);
+
+CREATE TABLE on_hand (
+    item      inventory_item,
+    count     integer
+);
+
+INSERT INTO on_hand VALUES (ROW('fuzzy dice', 42, 1.99), 1000);
+```
